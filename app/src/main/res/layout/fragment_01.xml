@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment01">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/colorAccent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_width="300sp"
+    android:layout_height="220sp">
+    <TextView
+        android:layout_marginTop="42sp"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siema"/>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="klikaj"
+        android:layout_marginTop="22sp"
+        android:layout_gravity="center"/>
+</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F1F1F1"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileFragment">
+
+    <LinearLayout
+        android:layout_marginTop="125sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/radius_spinner"
+        android:layout_width="430sp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_marginTop="12sp"
+            android:layout_marginBottom="12sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_marginStart="22sp"
+                    android:layout_marginTop="22sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="33sp"
+                    android:textStyle="bold"
+                    android:text="Ogólne informacje"/>
+
+                <EditText
+                    android:layout_marginTop="22sp"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginEnd="22sp"
+                    android:background="@drawable/radius_profile"
+                    android:id="@+id/editTextText"
+                    android:layout_width="match_parent"
+                    android:layout_height="62sp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="22sp"
+                    android:hint="   Login" />
+
+                <EditText
+                    android:layout_marginTop="22sp"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginEnd="22sp"
+                    android:background="@drawable/radius_profile"
+                    android:id="@+id/editTextText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="62sp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="22sp"
+                    android:hint="   Imię" />
+
+                <EditText
+                    android:layout_marginTop="22sp"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginEnd="22sp"
+                    android:background="@drawable/radius_profile"
+                    android:id="@+id/editTextText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="62sp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="22sp"
+                    android:hint="   Nazwisko" />
+
+                <EditText
+                    android:layout_marginTop="22sp"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginEnd="22sp"
+                    android:background="@drawable/radius_profile"
+                    android:id="@+id/editTextText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="62sp"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:textSize="22sp"
+                    android:hint="   Telefon" />
+
+                <EditText
+                    android:layout_marginTop="22sp"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginEnd="22sp"
+                    android:background="@drawable/radius_profile"
+                    android:id="@+id/editTextText4"
+                    android:layout_width="match_parent"
+                    android:layout_height="272sp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="22sp"
+                    android:hint="   Dodatkowe informacje" />
+
+                <EditText
+                    android:layout_marginTop="22sp"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginEnd="22sp"
+                    android:background="@drawable/radius_profile"
+                    android:id="@+id/editTextText5"
+                    android:layout_width="match_parent"
+                    android:layout_height="62sp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="22sp"
+                    android:hint="   Hasło" />
+
+                <EditText
+                    android:layout_marginTop="22sp"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginEnd="22sp"
+                    android:background="@drawable/radius_profile"
+                    android:id="@+id/editTextText6"
+                    android:layout_width="match_parent"
+                    android:layout_height="62sp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="22sp"
+                    android:hint="   Powtórz hasło" />
+
+                <LinearLayout
+                    android:layout_marginTop="22sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:textColor="@color/white"
+                        android:backgroundTint="#126AAF"
+                        android:layout_marginEnd="22sp"
+                        android:layout_width="150sp"
+                        android:layout_height="70sp"
+                        android:text="Zastosuj"/>
+
+                    <Button
+                        android:textColor="@color/white"
+                        android:backgroundTint="#126AAF"
+                        android:layout_width="150sp"
+                        android:layout_height="70sp"
+                        android:text="Anuluj"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

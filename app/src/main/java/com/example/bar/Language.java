@@ -10,7 +10,7 @@ public class Language {
     String[] editProfileLang = new String[10];
     String[] menu = new String[3];
     String[] menuBottom = new String[3];
-    String[] toastMessage = new String[1];
+    String[] toastMessage = new String[2];
     String[] database = new String[2];
     void setPolish(){
         spinnerChoose = new String[]{"Wybierz grupę","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -21,8 +21,8 @@ public class Language {
         editProfileLang = new String[]{"Ogólne informacje","Twój login", "Imię", "Nazwisko", "Telefon", "Dodatkowe informacje", "Hasło", "Powtórz hasło", "ZASTOSUJ", "ANULUJ"};
         menu = new String[]{"Edytuj profil", "Zmień język", "Wyloguj się"};
         menuBottom = new String[]{"Zajęcia", "Oceny", "Więcej"};
-        toastMessage = new String[]{"Uzupełnij wszystkie pola!"};
-        database = new String[]{"Tytuł", "Autor"};
+        toastMessage = new String[]{"Uzupełnij wszystkie pola!", "Podaj takie same hasła!"};
+        database = new String[]{"Login", "Imię", "Nazwisko", "Telefon", "Informacje", "Hasło", "Powtórzone hasło"};
     }
     void setEnglish(){
         spinnerChoose = new String[]{"Select group","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -33,8 +33,8 @@ public class Language {
         editProfileLang = new String[]{"General Information", "Your Username", "First Name", "Last Name", "Phone", "Additional Information", "Password", "Repeat Password", "APPLY", "CANCEL"};
         menu = new String[]{"Edit Profile", "Change Language", "Log Out"};
         menuBottom = new String[]{"Classes", "Grades", "More"};
-        toastMessage = new String[]{"Fill in all fields!"};
-        database = new String[]{"Title", "Author"};
+        toastMessage = new String[]{"Fill in all fields!", "Enter the same passwords!"};
+        database = new String[]{"Login", "First Name", "Last Name", "Phone", "Information", "Password", "Repeated Password"};
     }
     void setGerman(){
         spinnerChoose = new String[]{"Gruppe auswählen","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -45,8 +45,8 @@ public class Language {
         editProfileLang = new String[]{"Allgemeine Informationen", "Dein Benutzername", "Vorname", "Nachname", "Telefon", "Zusätzliche Informationen", "Passwort", "Passwort wiederholen", "ANWENDEN", "ABBRECHEN"};
         menu = new String[]{"Profil bearbeiten", "Sprache ändern", "Abmelden"};
         menuBottom = new String[]{"Stunden", "Noten", "Mehr"};
-        toastMessage = new String[]{"Füllen Sie alle Felder aus!"};
-        database = new String[]{"Titel", "Autor"};
+        toastMessage = new String[]{"Füllen Sie alle Felder aus!", "Geben Sie dieselben Passwörter ein!"};
+        database = new String[]{"Login", "Vorname", "Nachname", "Telefon", "Informationen", "Passwort", "Wiederholtes Passwort"};
     }
     void setFrench(){
         spinnerChoose = new String[]{"Choisissez un groupe", "1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -57,8 +57,9 @@ public class Language {
         editProfileLang = new String[]{"Informations générales", "Votre nom d'utilisateur", "Prénom", "Nom de famille", "Téléphone", "Informations supplémentaires", "Mot de passe", "Répéter le mot de passe", "APPLIQUER", "ANNULER"};
         menu = new String[]{"Modifier le profil", "Changer de langue", "Déconnexion"};
         menuBottom = new String[]{"Cours", "Notes", "Plus"};
-        toastMessage = new String[]{"Remplissez tous les champs!"};
+        toastMessage = new String[]{"Remplissez tous les champs !", "Entrez les mêmes mots de passe !"};
         database = new String[]{"Titre", "Auteur"};
+        database = new String[]{"Login", "Prénom", "Nom de famille", "Téléphone", "Informations", "Mot de passe", "Mot de passe répété"};
     }
     void setRussian(){
         spinnerChoose = new String[]{"Выберите группу","1А", "1Б", "1В", "1Г", "2А", "2Б", "2В", "2Г", "3А", "3Б", "3В", "3Г"};
@@ -69,8 +70,9 @@ public class Language {
         editProfileLang = new String[]{"Общая информация","Ваш логин", "Имя", "Фамилия", "Телефон", "Дополнительная информация", "Пароль", "Повторите пароль", "ПРИМЕНИТЬ", "ОТМЕНА"};
         menu = new String[]{"Редактировать профиль", "Изменить язык", "Выйти"};
         menuBottom = new String[]{"Занятия", "Оценки", "Еще"};
-        toastMessage = new String[]{"Заполните все поля!"};
+        toastMessage = new String[]{"Заполните все поля!", "Введите одинаковые пароли!"};
         database = new String[]{"Заголовок", "Автор"};
+        database = new String[]{"Логин", "Имя", "Фамилия", "Телефон", "Информация", "Пароль", "Повторите пароль"};
     }
 
     void setSpain(){
@@ -82,7 +84,7 @@ public class Language {
         editProfileLang = new String[]{"Información general", "Tu nombre de usuario", "Nombre", "Apellido", "Teléfono", "Información adicional", "Contraseña", "Repetir contraseña", "APLICAR", "CANCELAR"};
         menu = new String[]{"Editar perfil", "Cambiar idioma", "Cerrar sesión"};
         menuBottom = new String[]{"Clases", "Calificaciones", "Más"};
-        toastMessage = new String[]{"¡Complete todos los campos!"};
-        database = new String[]{"Título", "Autor"};
+        toastMessage = new String[]{"¡Complete todos los campos!", "¡Ingrese las mismas contraseñas!"};
+        database = new String[]{"Login", "Nombre", "Apellido", "Teléfono", "Información", "Contraseña", "Repetir Contraseña"};
     }
 }

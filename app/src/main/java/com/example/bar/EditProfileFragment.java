@@ -68,9 +68,22 @@ public class EditProfileFragment extends Fragment {
     }
 
     void addDB(DataBase dataBase){
-        if(!(fragmentEditProfileBinding.editTextText1.getText().toString().isEmpty() || fragmentEditProfileBinding.editTextText2.getText().toString().isEmpty() )){
-            dataBase.addBook(fragmentEditProfileBinding.editTextText1.getText().toString(), fragmentEditProfileBinding.editTextText2.getText().toString());
-            updateList(dataBase);
+        if(!(fragmentEditProfileBinding.editTextText5.getText().toString().isEmpty() || fragmentEditProfileBinding.editTextText6.getText().toString().isEmpty())){
+            if(fragmentEditProfileBinding.editTextText5.getText().toString().equals(fragmentEditProfileBinding.editTextText6.getText().toString())){
+                dataBase.addBook(
+                        fragmentEditProfileBinding.editTextText.getText().toString(),
+                        fragmentEditProfileBinding.editTextText1.getText().toString(),
+                        fragmentEditProfileBinding.editTextText2.getText().toString(),
+                        fragmentEditProfileBinding.editTextText3.getText().toString(),
+                        fragmentEditProfileBinding.editTextText4.getText().toString(),
+                        fragmentEditProfileBinding.editTextText5.getText().toString(),
+                        fragmentEditProfileBinding.editTextText6.getText().toString()
+                );
+                updateList(dataBase);
+            }else{
+                Toast.makeText(getContext(),language.toastMessage[1],Toast.LENGTH_SHORT).show();
+            }
+
         }else {
             Toast.makeText(getContext(), language.toastMessage[0],Toast.LENGTH_SHORT).show();
         }
@@ -88,8 +101,9 @@ public class EditProfileFragment extends Fragment {
         StringBuilder builder = new StringBuilder();
         while (c.moveToNext()) {
             builder.append("ID:" + c.getInt(0));
-            builder.append("\n"+language.database[0] + ": "+ c.getString(1));
-            builder.append("\n"+language.database[1] + ": "+ c.getString(2));
+            for( int i = 0, n = 1; i<language.database.length; i++, n++){
+                builder.append("\n"+language.database[i] + ": "+ c.getString(n));
+            }
             builder.append("\n---------------------------\n");
         }
         fragmentEditProfileBinding.dbResult.setText(builder.toString());

@@ -9,16 +9,23 @@ import org.jetbrains.annotations.NotNull;
 public class DataBase extends SQLiteOpenHelper {
     Context context;
     SQLiteDatabase db = getReadableDatabase();
-    public DataBase(@NotNull Context context){
-        super(context,"LessonLibrary.db",null,1);
+
+    public DataBase(@NotNull Context context) {
+        super(context, "profileApp1.db", null, 1);
         this.context = context;
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table mylibrary ( "
                 + " id integer PRIMARY KEY autoincrement, "
-                + " booktitle text, "
-                + " bookauthor text); ");
+                + " profileLogin text, "
+                + " profileName text, "
+                + " profileForname text, "
+                + " profilePhone text, "
+                + " profileExtraInfo text, "
+                + " profilePassword text, "
+                + " profileRePassword text); ");
     }
 
     @Override
@@ -27,20 +34,20 @@ public class DataBase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addBook(String title, String author){
-        db.execSQL("insert into mylibrary (booktitle, bookauthor) values ('"
-                + title+"', '"+author+"');" );
+    public void addBook(String profileLogin, String profileName, String profileForname, String profilePhone, String profileExtraInfo, String profilePassword, String profileRePassword) {
+        db.execSQL("insert into mylibrary (profileLogin, profileName, profileForname, profilePhone, profileExtraInfo, profilePassword, profileRePassword) values ('"
+                + profileLogin + "', '" + profileName + "', '" + profileForname + "', '" + profilePhone + "', '" + profileExtraInfo + "', '" + profilePassword + "', '" + profileRePassword + "');");
     }
 
     public Cursor getAllBook() {
         return db.rawQuery("select * from mylibrary", null);
     }
 
-    public void deleteAllBooks(String id){
-        db.execSQL("delete from mylibrary where id = '"+id+"';");
+    public void deleteAllBooks(String id) {
+        db.execSQL("delete from mylibrary where id = '" + id + "';");
     }
 
-    public void updateBook(String id){
-        db.execSQL("update mylibrary set booktitle = 'aktualizacja' where id = '"+id+"';");
+    public void updateBook(String id) {
+        db.execSQL("update mylibrary set profileLogin = 'aktualizacja' where id = '" + id + "';");
     }
 }

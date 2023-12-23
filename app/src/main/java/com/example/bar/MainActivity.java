@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         value = intent.getIntExtra("value",0);
         setLanguage(value,language);
 
+
         activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = activityMainBinding.getRoot();
         setContentView(view);

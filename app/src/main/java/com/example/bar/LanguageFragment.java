@@ -49,23 +49,18 @@ public class LanguageFragment extends Fragment {
 
         fragmentLanguageBinding.languageText.setText(language.options[1]);
 
-
         CustomGridViewAdapter customGridViewAdapter = new CustomGridViewAdapter(language.languageChoose, flag,getContext());
         fragmentLanguageBinding.gridView.setAdapter(customGridViewAdapter);
-
-
-
         fragmentLanguageBinding.gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getContext(), language.languageChoose[position], Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 intent.putExtra("value",position);
                 startActivity(intent);
-
             }
         });
+        fragmentLanguageBinding.backArrow.setOnClickListener(view1 ->((MainActivity)getActivity()).setFragment(new MoreFragment()));
         return view;
     }
 }

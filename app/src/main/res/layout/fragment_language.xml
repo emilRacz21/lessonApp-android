@@ -8,6 +8,7 @@
 
     <LinearLayout
 
+        android:id="@+id/ll1"
         android:layout_marginEnd="22sp"
         android:layout_marginStart="22sp"
         android:layout_marginTop="125sp"
@@ -17,15 +18,31 @@
         android:layout_width="430sp"
         android:layout_height="match_parent"
         android:orientation="vertical">
-                <TextView
-                    android:id="@+id/languageText"
-                    android:layout_marginStart="22sp"
-                    android:layout_marginTop="22sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="33sp"
-                    android:textStyle="bold"
-                    android:text="Wybierz język"/>
+        <GridLayout
+            android:layout_marginTop="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="2">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/backArrow"
+                android:layout_marginStart="26sp"
+                android:layout_width="30sp"
+                android:layout_height="40sp"
+                android:src="@drawable/back"/>
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:id="@+id/languageText"
+                android:layout_marginStart="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                android:text="Wybierz język"/>
+        </GridLayout>
+
         <GridView
             android:verticalSpacing="20dp"
             android:layout_marginStart="25sp"

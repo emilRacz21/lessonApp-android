@@ -1,5 +1,4 @@
 package com.example.bar;
-
 public class Lesson {
     String data1;
     String data2;

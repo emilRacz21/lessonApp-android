@@ -11,11 +11,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="22sp"
-            android:text="Poland"/>
+            android:text="@string/poland"/>
         <ImageView
             android:layout_marginTop="12sp"
             android:id="@+id/langImg"
             android:layout_gravity="center"
             android:layout_width="120sp"
-            android:layout_height="70sp" />
+            android:layout_height="70sp"
+            android:contentDescription="@string/app_name" />
 </LinearLayout>

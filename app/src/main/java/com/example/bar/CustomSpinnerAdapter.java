@@ -11,13 +11,11 @@ public class CustomSpinnerAdapter extends BaseAdapter {
     String[] options;
     Context context;
     LayoutInflater inflater;
-
     CustomSpinnerAdapter(String[] options, Context context) {
         this.options = options;
         this.context = context;
         inflater = LayoutInflater.from(context);
     }
-
     @Override
     public int getCount() {
         return options.length;
@@ -38,10 +36,8 @@ public class CustomSpinnerAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.custom_spinner, parent, false);
         }
-
         TextView text = convertView.findViewById(R.id.customSpinnerAdapte);
         text.setText(options[position]);
-
         return convertView;
     }
 
@@ -50,10 +46,8 @@ public class CustomSpinnerAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.custom_spinner, parent, false);
         }
-
         TextView text = convertView.findViewById(R.id.customSpinnerAdapte);
         text.setText(options[position]);
-
         return convertView;
     }
 }

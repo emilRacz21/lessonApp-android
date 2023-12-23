@@ -9,14 +9,16 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/optionsText"
         android:layout_marginTop="52sp"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="#126AAF"
-        android:text="Wybierz opcje" />
+        android:textColor="@color/colorPrimary"
+        android:text="@string/wybierz_opcje"
+        tools:ignore="VisualLintOverlap" />
 
     <LinearLayout
         android:layout_centerVertical="true"
@@ -46,14 +48,16 @@
                         android:layout_marginEnd="12sp"
                         android:layout_width="42sp"
                         android:layout_height="42sp"
-                        android:src="@drawable/baseline_home_24"/>
+                        android:src="@drawable/baseline_home_24"
+                        android:contentDescription="@string/app_name" />
                     <TextView
+                        android:id="@+id/titleHome"
                         android:textColor="#000000"
                         android:textStyle="bold"
                         android:textSize="32sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Strona główna"/>
+                        android:text="@string/strona_g_wna"/>
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/editProfile"
@@ -65,14 +69,16 @@
                         android:layout_marginEnd="12sp"
                         android:layout_width="42sp"
                         android:layout_height="42sp"
+                        android:contentDescription="@string/app_name"
                         android:src="@drawable/baseline_person_24"/>
                     <TextView
+                        android:id="@+id/editProfileText"
                         android:textColor="#000000"
                         android:textStyle="bold"
                         android:textSize="32sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Edytuj profil"/>
+                        android:text="@string/edytuj_profil"/>
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/languageSet"
@@ -83,14 +89,16 @@
                         android:layout_marginEnd="12sp"
                         android:layout_width="42sp"
                         android:layout_height="42sp"
-                        android:src="@drawable/baseline_language_24"/>
+                        android:src="@drawable/baseline_language_24"
+                        android:contentDescription="@string/app_name" />
                     <TextView
+                        android:id="@+id/changeLanguage"
                         android:textColor="#000000"
                         android:textStyle="bold"
                         android:textSize="32sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Zmień język"/>
+                        android:text="@string/zmie_j_zyk"/>
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>

@@ -19,23 +19,27 @@
             android:layout_marginTop="12sp"
             android:layout_marginBottom="12sp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="vertical"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/informationText"
                     android:layout_marginStart="22sp"
                     android:layout_marginTop="22sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="33sp"
                     android:textStyle="bold"
-                    android:text="Ogólne informacje"/>
+                    android:text="@string/og_lne_informacje"/>
 
                 <EditText
+                    android:hint="@string/login"
+                    android:paddingLeft="10dp"
                     android:layout_marginTop="22sp"
                     android:layout_marginStart="22sp"
                     android:layout_marginEnd="22sp"
@@ -46,9 +50,12 @@
                     android:ems="10"
                     android:inputType="text"
                     android:textSize="22sp"
-                    android:hint="   Login" />
+                    android:autofillHints="name"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
 
                 <EditText
+                    android:hint="@string/imie"
+                    android:paddingLeft="10dp"
                     android:layout_marginTop="22sp"
                     android:layout_marginStart="22sp"
                     android:layout_marginEnd="22sp"
@@ -59,9 +66,12 @@
                     android:ems="10"
                     android:inputType="text"
                     android:textSize="22sp"
-                    android:hint="   Imię" />
+                    android:autofillHints="name"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
 
                 <EditText
+                    android:hint="@string/nazwisko"
+                    android:paddingLeft="10dp"
                     android:layout_marginTop="22sp"
                     android:layout_marginStart="22sp"
                     android:layout_marginEnd="22sp"
@@ -72,60 +82,70 @@
                     android:ems="10"
                     android:inputType="text"
                     android:textSize="22sp"
-                    android:hint="   Nazwisko" />
+                    android:autofillHints="username"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
 
                 <EditText
-                    android:layout_marginTop="22sp"
-                    android:layout_marginStart="22sp"
-                    android:layout_marginEnd="22sp"
-                    android:background="@drawable/radius_profile"
                     android:id="@+id/editTextText3"
                     android:layout_width="match_parent"
                     android:layout_height="62sp"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginTop="22sp"
+                    android:layout_marginEnd="22sp"
+                    android:autofillHints="phone"
+                    android:background="@drawable/radius_profile"
                     android:ems="10"
+                    android:hint="@string/telefon"
                     android:inputType="phone"
+                    android:paddingLeft="10dp"
                     android:textSize="22sp"
-                    android:hint="   Telefon" />
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextContrastCheck" />
 
                 <EditText
-                    android:layout_marginTop="22sp"
-                    android:layout_marginStart="22sp"
-                    android:layout_marginEnd="22sp"
-                    android:background="@drawable/radius_profile"
                     android:id="@+id/editTextText4"
                     android:layout_width="match_parent"
                     android:layout_height="272sp"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginTop="22sp"
+                    android:layout_marginEnd="22sp"
+                    android:autofillHints="name"
+                    android:background="@drawable/radius_profile"
                     android:ems="10"
+                    android:hint="@string/dodatkowe_informacje"
                     android:inputType="text"
+                    android:paddingLeft="10dp"
                     android:textSize="22sp"
-                    android:hint="   Dodatkowe informacje" />
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextContrastCheck" />
 
                 <EditText
-                    android:layout_marginTop="22sp"
-                    android:layout_marginStart="22sp"
-                    android:layout_marginEnd="22sp"
-                    android:background="@drawable/radius_profile"
                     android:id="@+id/editTextText5"
                     android:layout_width="match_parent"
                     android:layout_height="62sp"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:textSize="22sp"
-                    android:hint="   Hasło" />
-
-                <EditText
-                    android:layout_marginTop="22sp"
                     android:layout_marginStart="22sp"
+                    android:layout_marginTop="22sp"
                     android:layout_marginEnd="22sp"
                     android:background="@drawable/radius_profile"
+                    android:ems="10"
+                    android:hint="@string/has_o"
+                    android:paddingLeft="10dp"
+                    android:textSize="22sp"
+                    tools:ignore="Autofill,RtlHardcoded,RtlSymmetry,TextFields,TextContrastCheck" />
+
+                <EditText
                     android:id="@+id/editTextText6"
                     android:layout_width="match_parent"
                     android:layout_height="62sp"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginTop="22sp"
+                    android:layout_marginEnd="22sp"
+                    android:autofillHints=""
+                    android:background="@drawable/radius_profile"
                     android:ems="10"
+                    android:hint="@string/powt_rz_has_o"
                     android:inputType="text"
+                    android:paddingLeft="10dp"
                     android:textSize="22sp"
-                    android:hint="   Powtórz hasło" />
-
+                    tools:ignore="RtlHardcoded,RtlSymmetry,TextContrastCheck" />
                 <LinearLayout
                     android:layout_marginTop="22sp"
                     android:layout_gravity="center"
@@ -133,28 +153,47 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/buttonAccept"
                         android:textColor="@color/white"
-                        android:backgroundTint="#126AAF"
-                        android:layout_marginEnd="22sp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_marginEnd="5sp"
                         android:layout_width="150sp"
                         android:layout_height="70sp"
-                        android:text="Zastosuj"/>
+                        android:text="@string/zastosuj"
+                        tools:ignore="ButtonStyle" />
 
                     <Button
+                        android:id="@+id/buttonCancel"
                         android:textColor="@color/white"
-                        android:backgroundTint="#126AAF"
+                        android:backgroundTint="@color/colorPrimary"
                         android:layout_width="150sp"
+                        android:layout_marginEnd="5sp"
                         android:layout_height="70sp"
-                        android:text="Anuluj"/>
+                        android:text="@string/anuluj"
+                        tools:ignore="ButtonStyle" />
                 </LinearLayout>
+                <Button
+                    android:layout_marginTop="22sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/buttonDel"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_width="150sp"
+                    android:layout_height="70sp"
+                    android:text="@string/usu"
+                    tools:ignore="ButtonStyle" />
+                <TextView
+                    android:layout_marginTop="12sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dbResult"
+                    android:textSize="22sp"/>
 
             </LinearLayout>
 
         </ScrollView>
 
     </LinearLayout>
-
-
-
 
 </RelativeLayout>

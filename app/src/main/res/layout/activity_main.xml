@@ -11,14 +11,16 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="893sp"/>
-
+        android:layout_height="863sp"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:background="@color/white"
         app:menu="@menu/nav_menu"
+        app:itemIconSize="36sp"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.active"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView.inactive"
         android:id="@+id/bottomNavigationView"
-        android:layout_height="58sp"
+        android:layout_height="88sp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="376dp" />
 </LinearLayout>

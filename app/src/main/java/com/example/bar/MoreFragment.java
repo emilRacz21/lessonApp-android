@@ -1,46 +1,20 @@
 package com.example.bar;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MoreFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.bar.databinding.FragmentMoreBinding;
 public class MoreFragment extends Fragment {
-    LinearLayout changeHomeScreenFragment;
-    LinearLayout editProfile;
-    LinearLayout languageSet;
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    FragmentMoreBinding fragmentMoreBinding;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    int choosedLang;
+    public MoreFragment() {}
 
-    public MoreFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MoreFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static MoreFragment newInstance(String param1, String param2) {
         MoreFragment fragment = new MoreFragment();
         Bundle args = new Bundle();
@@ -62,21 +36,35 @@ public class MoreFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_more, container, false);
-        // Inflate the layout for this fragment
-        changeHomeScreenFragment = view.findViewById(R.id.changeHomeScreenFragment);
-        changeHomeScreenFragment.setOnClickListener( view1 ->{
+        fragmentMoreBinding = FragmentMoreBinding.inflate(inflater, container, false);
+        View view = fragmentMoreBinding.getRoot();
+
+        Language language = new Language();
+        choosedLang = ((MainActivity)getActivity()).value;
+        ((MainActivity)getActivity()).setLanguage(choosedLang, language);
+
+        setLang(language);
+
+        fragmentMoreBinding.changeHomeScreenFragment.setOnClickListener( view1 ->{
             ((MainActivity)getActivity()).setFragment(new HomeFragment());
         });
-        editProfile = view.findViewById(R.id.editProfile);
-        editProfile.setOnClickListener( view1 ->{
+
+        fragmentMoreBinding.editProfile.setOnClickListener( view1 ->{
             ((MainActivity)getActivity()).setFragment(new EditProfileFragment());
         });
-        languageSet = view.findViewById(R.id.languageSet);
-        languageSet.setOnClickListener( view1->{
+
+        fragmentMoreBinding.languageSet.setOnClickListener( view1->{
             ((MainActivity)getActivity()).setFragment(new LanguageFragment());
         });
 
         return view;
+    }
+
+    void setLang(Language language){
+        fragmentMoreBinding.titleHome.setText(language.actionBarTitle[0]);
+        fragmentMoreBinding.editProfileText.setText(language.actionBarTitle[3]);
+        fragmentMoreBinding.changeLanguage.setText(language.actionBarTitle[4]);
+        fragmentMoreBinding.optionsText.setText(language.options[0]);
+        ((MainActivity)getActivity()).setActionBar(language.actionBarTitle[5], R.drawable.baseline_more_horiz_24);
     }
 }

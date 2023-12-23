@@ -7,7 +7,7 @@
         app:showAsAction="never"
         android:orderInCategory="122"
         android:title="Edytuj profil"
-        android:icon="@drawable/baseline_calendar_month_24"
+        android:icon="@drawable/baseline_contact_emergency_24"
         />
 
     <item
@@ -15,14 +15,14 @@
         app:showAsAction="never"
         android:orderInCategory="140"
         android:title="zmień język"
-        android:icon="@drawable/baseline_calendar_month_24"
+        android:icon="@drawable/baseline_language_24"
         />
     <item
         android:id="@+id/logout"
         app:showAsAction="never"
         android:orderInCategory="140"
         android:title="wyloguj się"
-        android:icon="@drawable/baseline_calendar_month_24"
+        android:icon="@drawable/baseline_person_24"
         />
 
 </menu>

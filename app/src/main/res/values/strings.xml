@@ -2,4 +2,32 @@
     <string name="app_name">Bar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="witam">witam</string>
+    <string name="poland">Poland</string>
+    <string name="zmie_j_zyk">Zmień język</string>
+    <string name="edytuj_profil">Edytuj profil</string>
+    <string name="wybierz_opcje">Wybierz opcje</string>
+    <string name="strona_g_wna">Strona główna</string>
+    <string name="usun_rekordy">usun rekordy</string>
+    <string name="akceptuj">akceptuj</string>
+    <string name="wpisz_pierwszy_tekst">wpisz pierwszy tekst</string>
+    <string name="wpisz_drugi_tekst">wpisz drugi tekst</string>
+    <string name="wynik">wynik</string>
+    <string name="brak_zajec_w_podanym_zakresie">Brak zajec w podanym zakresie</string>
+    <string name="nast_pny">NASTĘPNY</string>
+    <string name="poprzedni">POPRZEDNI</string>
+    <string name="zobacz_wszystkie_zajecia">ZOBACZ WSZYSTKIE ZAJECIA</string>
+    <string name="dzisiejsze_zaj_cia">DZISIEJSZE ZAJĘCIA</string>
+    <string name="zastosuj">Zastosuj</string>
+    <string name="anuluj">Anuluj</string>
+    <string name="login">Login</string>
+    <string name="imie">Imie</string>
+    <string name="powt_rz_has_o">Powtórz hasło</string>
+    <string name="og_lne_informacje">Ogólne informacje</string>
+    <string name="telefon">Telefon</string>
+    <string name="nazwisko">Nazwisko</string>
+    <string name="has_o">Hasło</string>
+    <string name="spinner">spinner</string>
+    <string name="dodatkowe_informacje">Dodatkowe informacje</string>
+    <string name="usu">USUŃ</string>
 </resources>

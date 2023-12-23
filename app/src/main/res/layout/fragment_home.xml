@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#F1F1F1"
+    android:background="@color/colorAccent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
@@ -14,18 +14,20 @@
 
         <ImageView
             android:layout_marginStart="10sp"
-            android:layout_width="30sp"
-            android:layout_height="30sp"
-            android:src="@drawable/home_callendar"/>
+            android:layout_width="36sp"
+            android:layout_height="36sp"
+            android:src="@drawable/home_callendar"
+            android:contentDescription="@string/app_name" />
         <TextView
-            android:textSize="16sp"
-            android:textColor="#126AAF"
+            android:id="@+id/textTopLesson"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
             android:textStyle="bold"
             android:layout_marginStart="12sp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DZISIEJSZE ZAJĘCIA"/>
+            android:text="@string/dzisiejsze_zaj_cia"/>
     </LinearLayout>
 
     <GridLayout
@@ -39,28 +41,31 @@
         android:layout_below="@+id/todayLessons">
 
         <TextView
+            android:id="@+id/previousText"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:layout_marginStart="12sp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="POPRZEDNI"/>
+            android:text="@string/poprzedni"/>
 
         <ImageView
+            android:contentDescription="@string/app_name"
             android:layout_marginStart="10sp"
             android:layout_width="170sp"
             android:layout_height="wrap_content"
             android:src="@drawable/home_today"/>
 
         <TextView
+            android:id="@+id/nextText"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:layout_marginStart="12sp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NASTĘPNY"/>
+            android:text="@string/nast_pny"/>
     </GridLayout>
 
     <LinearLayout
@@ -71,24 +76,30 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <ImageView
+            android:contentDescription="@string/app_name"
             android:layout_gravity="center"
             android:layout_width="120sp"
             android:layout_height="120sp"
             android:src="@drawable/baseline_calendar_month_24"/>
+
         <TextView
-            android:layout_gravity="center"
+            android:textSize="17sp"
+            android:id="@+id/emptyLessonText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Brak zajec w podanym zakresie" />
+            android:layout_gravity="center"
+            android:text="@string/brak_zajec_w_podanym_zakresie"
+            android:textColor="#616161" />
         <TextView
-            android:textSize="16sp"
-            android:textColor="#126AAF"
+            android:id="@+id/showMoreText"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
             android:textStyle="bold"
             android:layout_marginTop="22sp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ZOBACZ WSZYSTKIE ZAJECIA" />
+            android:text="@string/zobacz_wszystkie_zajecia" />
     </LinearLayout>
 
 

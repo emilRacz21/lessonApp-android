@@ -1,42 +1,24 @@
 package com.example.bar;
 
+import android.database.Cursor;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link EditProfileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.bar.databinding.FragmentEditProfileBinding;
+
 public class EditProfileFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
+    FragmentEditProfileBinding fragmentEditProfileBinding;
     private String mParam1;
     private String mParam2;
-
-    public EditProfileFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment EditProfileFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+    Language language = new Language();
+    int choosedLang;
+    public EditProfileFragment() {}
     public static EditProfileFragment newInstance(String param1, String param2) {
         EditProfileFragment fragment = new EditProfileFragment();
         Bundle args = new Bundle();
@@ -56,9 +38,60 @@ public class EditProfileFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_edit_profile, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        fragmentEditProfileBinding = FragmentEditProfileBinding.inflate(inflater, container, false);
+        View view = fragmentEditProfileBinding.getRoot();
+        choosedLang = ((MainActivity)getActivity()).value;
+        DataBase dataBase = new DataBase(getContext());
+        ((MainActivity)getActivity()).setLanguage(choosedLang, language);
+        setHintText();
+        fragmentEditProfileBinding.buttonCancel.setOnClickListener(view1->{
+            ((MainActivity)getActivity()).setFragment(new MoreFragment());
+        });
+        fragmentEditProfileBinding.buttonAccept.setOnClickListener(view1 -> addDB(dataBase));
+        fragmentEditProfileBinding.buttonDel.setOnClickListener(view1 -> deleteDB(dataBase));
+        return view;
+    }
+    void setHintText(){
+        ((MainActivity)getActivity()).setActionBar(language.actionBarTitle[3], R.drawable.baseline_person_24);
+        fragmentEditProfileBinding.informationText.setText(language.editProfileLang[0]);
+        fragmentEditProfileBinding.editTextText.setHint(language.editProfileLang[1]);
+        fragmentEditProfileBinding.editTextText1.setHint(language.editProfileLang[2]);
+        fragmentEditProfileBinding.editTextText2.setHint(language.editProfileLang[3]);
+        fragmentEditProfileBinding.editTextText3.setHint(language.editProfileLang[4]);
+        fragmentEditProfileBinding.editTextText4.setHint(language.editProfileLang[5]);
+        fragmentEditProfileBinding.editTextText5.setHint(language.editProfileLang[6]);
+        fragmentEditProfileBinding.editTextText6.setHint(language.editProfileLang[7]);
+        fragmentEditProfileBinding.buttonAccept.setText(language.editProfileLang[8]);
+        fragmentEditProfileBinding.buttonCancel.setText(language.editProfileLang[9]);
+    }
+
+    void addDB(DataBase dataBase){
+        if(!(fragmentEditProfileBinding.editTextText1.getText().toString().isEmpty() || fragmentEditProfileBinding.editTextText2.getText().toString().isEmpty() )){
+            dataBase.addBook(fragmentEditProfileBinding.editTextText1.getText().toString(), fragmentEditProfileBinding.editTextText2.getText().toString());
+            updateList(dataBase);
+        }else {
+            Toast.makeText(getContext(), language.toastMessage[0],Toast.LENGTH_SHORT).show();
+        }
+    }
+    void deleteDB(DataBase dataBase){
+        Cursor cursor = dataBase.getAllBook();
+        if(cursor.moveToLast()){
+            int id = cursor.getInt(0);
+            dataBase.deleteAllBooks(String.valueOf(id));
+            updateList(dataBase);
+        }
+    }
+    private void updateList(DataBase db) {
+        Cursor c = db.getAllBook();
+        StringBuilder builder = new StringBuilder();
+        while (c.moveToNext()) {
+            builder.append("ID:" + c.getInt(0));
+            builder.append("\n"+language.database[0] + ": "+ c.getString(1));
+            builder.append("\n"+language.database[1] + ": "+ c.getString(2));
+            builder.append("\n---------------------------\n");
+        }
+        fragmentEditProfileBinding.dbResult.setText(builder.toString());
     }
 }

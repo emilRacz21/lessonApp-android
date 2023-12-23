@@ -4,10 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F1F1F1"
+    android:background="@color/colorAccent"
     tools:context=".GradesFragment">
-
-
     <Spinner
         android:id="@+id/spinnerGrades"
         android:layout_width="wrap_content"

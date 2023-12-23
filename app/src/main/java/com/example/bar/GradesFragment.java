@@ -1,50 +1,25 @@
 package com.example.bar;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link GradesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.bar.databinding.FragmentGradesBinding;
+
 public class GradesFragment extends Fragment {
-
-    String[] options = {"Wybierz grupę", "1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
-
-    Spinner spinner;
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    int choosedLang;
+    FragmentGradesBinding fragmentGradesBinding;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public GradesFragment() {
-        // Required empty public constructor
-    }
+    public GradesFragment() {}
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment GradesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static GradesFragment newInstance(String param1, String param2) {
         GradesFragment fragment = new GradesFragment();
         Bundle args = new Bundle();
@@ -64,33 +39,24 @@ public class GradesFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_grades, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        fragmentGradesBinding = FragmentGradesBinding.inflate(inflater, container, false);
+        View view = fragmentGradesBinding.getRoot();
+        Language language = new Language();
+        choosedLang = ((MainActivity)getActivity()).value;
+        ((MainActivity)getActivity()).setLanguage(choosedLang, language);
+        ((MainActivity)getActivity()).setActionBar(language.actionBarTitle[2], R.drawable.baseline_plus_one_24);
+        CustomSpinnerAdapter customSpinnerAdapter = new CustomSpinnerAdapter(language.spinnerChoose, getContext());
+        fragmentGradesBinding.spinnerGrades.setAdapter(customSpinnerAdapter);
 
-        spinner = view.findViewById(R.id.spinnerGrades);
-//        ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, options);
-//        stringArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(stringArrayAdapter);
-        CustomSpinnerAdapter customSpinnerAdapter = new CustomSpinnerAdapter(options, getContext());
-        spinner.setAdapter(customSpinnerAdapter);
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        fragmentGradesBinding.spinnerGrades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selected = options[position];
-                if(!(selected == options[0])){
+                String selected = language.spinnerChoose[position];
+                if(!(selected == language.spinnerChoose[0])){
                     Toast.makeText(getActivity(), "Wybrano: "+selected,Toast.LENGTH_SHORT).show();
                 }
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
+            } @Override public void onNothingSelected(AdapterView<?> parent) {}});
         return view;
     }
 }

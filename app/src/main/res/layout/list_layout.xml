@@ -2,25 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@drawable/radius"
-    android:layout_height="72sp">
+    android:layout_height="82sp">
                 <TextView
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:layout_marginStart="27sp"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
                     android:textSize="22sp"
-                    android:layout_width="420sp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/witam"
                     android:id="@+id/textList"/>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textList"
+        android:layout_marginStart="422sp"
         android:layout_centerVertical="true"
-        android:layout_marginStart="3333dp"
-        android:layout_marginEnd="-27dp"
         android:src="@drawable/lesson_up"
         android:contentDescription="@string/app_name" />
 </RelativeLayout>

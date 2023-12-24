@@ -42,18 +42,18 @@ public class GradesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         fragmentGradesBinding = FragmentGradesBinding.inflate(inflater, container, false);
         View view = fragmentGradesBinding.getRoot();
-        Language language = new Language();
+        LanguageVocabulary languageVocabulary = new LanguageVocabulary();
         choosedLang = ((MainActivity)getActivity()).value;
-        ((MainActivity)getActivity()).setLanguage(choosedLang, language);
-        ((MainActivity)getActivity()).setActionBar(language.actionBarTitle[2], R.drawable.baseline_plus_one_24);
-        CustomSpinnerAdapter customSpinnerAdapter = new CustomSpinnerAdapter(language.spinnerChoose, getContext());
+        ((MainActivity)getActivity()).setLanguage(choosedLang, languageVocabulary);
+        ((MainActivity)getActivity()).setActionBar(languageVocabulary.actionBarTitle[2], R.drawable.baseline_plus_one_24);
+        CustomSpinnerAdapter customSpinnerAdapter = new CustomSpinnerAdapter(languageVocabulary.spinnerChoose, getContext());
         fragmentGradesBinding.spinnerGrades.setAdapter(customSpinnerAdapter);
 
         fragmentGradesBinding.spinnerGrades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selected = language.spinnerChoose[position];
-                if(!(selected == language.spinnerChoose[0])){
+                String selected = languageVocabulary.spinnerChoose[position];
+                if(!(selected == languageVocabulary.spinnerChoose[0])){
                     Toast.makeText(getActivity(), "Wybrano: "+selected,Toast.LENGTH_SHORT).show();
                 }
             } @Override public void onNothingSelected(AdapterView<?> parent) {}});

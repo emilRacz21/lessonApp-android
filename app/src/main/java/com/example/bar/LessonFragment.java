@@ -1,14 +1,18 @@
 package com.example.bar;
 
-import android.database.Cursor;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.example.bar.databinding.FragmentLessonBinding;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class LessonFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
@@ -17,7 +21,7 @@ public class LessonFragment extends Fragment {
     private String mParam2;
     int choosedLang;
     FragmentLessonBinding fragmentLessonBinding;
-    List<Lesson> lessonList = new ArrayList<>();
+    List<LessonList> lessonList = new ArrayList<>();
     public LessonFragment() {}
     public static LessonFragment newInstance(String param1, String param2) {
         LessonFragment fragment = new LessonFragment();
@@ -42,17 +46,26 @@ public class LessonFragment extends Fragment {
                              Bundle savedInstanceState) {
         fragmentLessonBinding = FragmentLessonBinding.inflate(inflater, container, false);
         View view = fragmentLessonBinding.getRoot();
-        Language language = new Language();
-        lessonList.add(new Lesson("11.12.2023","15.12.2023"));
-        lessonList.add(new Lesson("18.12.2023","22.12.2023"));
-        lessonList.add(new Lesson("25.12.2023","29.12.2023"));
-
-        LessonCustomAdapter lessonCustomAdapter = new LessonCustomAdapter(lessonList,getContext());
-        fragmentLessonBinding.listView.setAdapter(lessonCustomAdapter);
+        LanguageVocabulary languageVocabulary = new LanguageVocabulary();
+        printDays();
+        CustomLessonAdapter customLessonAdapter = new CustomLessonAdapter(lessonList,getContext());
+        fragmentLessonBinding.listView.setAdapter(customLessonAdapter);
         choosedLang = ((MainActivity)getActivity()).value;
-        ((MainActivity)getActivity()).setLanguage(choosedLang, language);
-        ((MainActivity)getActivity()).setActionBar(language.actionBarTitle[1], R.drawable.baseline_calendar_month_24);
+        ((MainActivity)getActivity()).setLanguage(choosedLang, languageVocabulary);
+        ((MainActivity)getActivity()).setActionBar(languageVocabulary.actionBarTitle[1], R.drawable.baseline_calendar_month_24);
         return view;
     }
-
+    void printDays() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        for (int week = 1; week <= 27; week++) {
+            calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
+            String formattedDateMonday = dateFormat.format(calendar.getTime());
+            calendar.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+            String formattedDateFriday = dateFormat.format(calendar.getTime());
+            lessonList.add(new LessonList(formattedDateMonday, formattedDateFriday));
+            calendar.add(Calendar.WEEK_OF_YEAR, 1);
+        }
+    }
 }

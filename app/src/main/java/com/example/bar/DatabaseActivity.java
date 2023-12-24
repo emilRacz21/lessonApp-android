@@ -6,11 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import org.jetbrains.annotations.NotNull;
 
-public class DataBase extends SQLiteOpenHelper {
+public class DatabaseActivity extends SQLiteOpenHelper {
     Context context;
     SQLiteDatabase db = getReadableDatabase();
 
-    public DataBase(@NotNull Context context) {
+    public DatabaseActivity(@NotNull Context context) {
         super(context, "profileApp1.db", null, 1);
         this.context = context;
     }
@@ -47,7 +47,7 @@ public class DataBase extends SQLiteOpenHelper {
         db.execSQL("delete from mylibrary where id = '" + id + "';");
     }
 
-    public void updateBook(String id) {
+    public void updateDB(String id) {
         db.execSQL("update mylibrary set profileLogin = 'aktualizacja' where id = '" + id + "';");
     }
 }

@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import java.util.List;
-public class LessonCustomAdapter extends BaseAdapter {
-    List<Lesson> lessonList;
+public class CustomLessonAdapter extends BaseAdapter {
+    List<LessonList> lessonList;
     LayoutInflater inflater;
-    LessonCustomAdapter(List<Lesson> lessonList, Context context){
+    CustomLessonAdapter(List<LessonList> lessonList, Context context){
         this.lessonList = lessonList;
         inflater = LayoutInflater.from(context);
     }
@@ -35,9 +35,9 @@ public class LessonCustomAdapter extends BaseAdapter {
         if(convertView == null){
             convertView= inflater.inflate(R.layout.list_layout,parent,false);
         }
-        Lesson lesson = lessonList.get(position);
+        LessonList lessonList = this.lessonList.get(position);
         TextView text = convertView.findViewById(R.id.textList);
-        text.setText(lesson.data1 +" - "+ lesson.data2);
+        text.setText(lessonList.data1 +" - "+ lessonList.data2);
         return convertView;
     }
 }

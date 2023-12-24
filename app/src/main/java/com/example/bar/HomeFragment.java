@@ -10,7 +10,6 @@ import com.example.bar.databinding.FragmentHomeBinding;
 public class HomeFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     private String mParam1;
     private String mParam2;
     int choosedLang;
@@ -38,17 +37,17 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         fragmentHomeBinding = FragmentHomeBinding.inflate(inflater, container, false);
         View view = fragmentHomeBinding.getRoot();
-        Language language = new Language();
+        LanguageVocabulary languageVocabulary = new LanguageVocabulary();
 
         choosedLang = ((MainActivity)getActivity()).value;
-        ((MainActivity)getActivity()).setLanguage(choosedLang, language);
-        fragmentHomeBinding.textTopLesson.setText(language.home[0]);
-        fragmentHomeBinding.previousText.setText(language.home[1]);
-        fragmentHomeBinding.nextText.setText(language.home[2]);
-        fragmentHomeBinding.emptyLessonText.setText(language.home[3]);
-        fragmentHomeBinding.showMoreText.setText(language.home[4]);
+        ((MainActivity)getActivity()).setLanguage(choosedLang, languageVocabulary);
+        fragmentHomeBinding.textTopLesson.setText(languageVocabulary.home[0]);
+        fragmentHomeBinding.previousText.setText(languageVocabulary.home[1]);
+        fragmentHomeBinding.nextText.setText(languageVocabulary.home[2]);
+        fragmentHomeBinding.emptyLessonText.setText(languageVocabulary.home[3]);
+        fragmentHomeBinding.showMoreText.setText(languageVocabulary.home[4]);
 
-        ((MainActivity)getActivity()).setActionBar(language.actionBarTitle[0], R.drawable.baseline_home_24);
+        ((MainActivity)getActivity()).setActionBar(languageVocabulary.actionBarTitle[0], R.drawable.baseline_home_24);
 
         return view;
     }

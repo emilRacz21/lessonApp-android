@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -21,7 +20,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
-    Language language = new Language();
+    LanguageVocabulary languageVocabulary = new LanguageVocabulary();
     ActivityMainBinding activityMainBinding;
     int value;
     @Override
@@ -29,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         value = intent.getIntExtra("value",0);
-        setLanguage(value,language);
+        setLanguage(value, languageVocabulary);
 
 
         activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = activityMainBinding.getRoot();
         setContentView(view);
         setFragment(new HomeFragment());
-        setActionBar(language.actionBarTitle[1], R.drawable.baseline_home_24);
+        setActionBar(languageVocabulary.actionBarTitle[1], R.drawable.baseline_home_24);
 
         getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this,R.color.white));
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE
@@ -67,14 +66,14 @@ public class MainActivity extends AppCompatActivity {
 
     void setBottomMenu(){
         Menu menu = activityMainBinding.bottomNavigationView.getMenu();
-        for( int i = 0 ; i < language.menu.length; i++){
-            menu.getItem(i).setTitle(language.menuBottom[i]);
+        for(int i = 0; i < languageVocabulary.menu.length; i++){
+            menu.getItem(i).setTitle(languageVocabulary.menuBottom[i]);
         }
     }
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu, menu);
-        for( int i = 0 ; i < language.menu.length; i++){
-            menu.getItem(i).setTitle(language.menu[i]);
+        for(int i = 0; i < languageVocabulary.menu.length; i++){
+            menu.getItem(i).setTitle(languageVocabulary.menu[i]);
         }
         return true;
     }
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             setFragment(new LanguageFragment());
         }
         else if(item.getItemId() == R.id.logout) {
-            Toast.makeText(this,language.menu[2], Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, languageVocabulary.menu[2], Toast.LENGTH_SHORT).show();
         }else if(item.getItemId() == R.id.profile) {
             setFragment(new EditProfileFragment());
         }else {
@@ -110,28 +109,28 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setLogo(logo);
     }
 
-    void setLanguage(int choosedLang, Language language){
+    void setLanguage(int choosedLang, LanguageVocabulary languageVocabulary){
         switch(choosedLang) {
             case 0:
-                language.setPolish();
+                languageVocabulary.setPolish();
                 break;
             case 1:
-                language.setGerman();
+                languageVocabulary.setGerman();
                 break;
             case 2:
-                language.setEnglish();
+                languageVocabulary.setEnglish();
                 break;
             case 3:
-                language.setFrench();
+                languageVocabulary.setFrench();
                 break;
             case 4:
-                language.setRussian();
+                languageVocabulary.setRussian();
                 break;
             case 5:
-                language.setSpain();
+                languageVocabulary.setSpain();
                 break;
             default:
-                language.setPolish();
+                languageVocabulary.setPolish();
                 break;
         }
     }

@@ -8,13 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.zip.Inflater;
-
-public class CustomGridViewAdapter extends BaseAdapter {
+public class CustomLanguageAdapter extends BaseAdapter {
     String[] lang;
     int[] flag;
     LayoutInflater inflater;
-    CustomGridViewAdapter(String[] lang, int[] flag, Context context){
+    CustomLanguageAdapter(String[] lang, int[] flag, Context context){
         this.lang = lang;
         this.flag = flag;
         inflater = LayoutInflater.from(context);

@@ -1,6 +1,6 @@
 package com.example.bar;
 
-public class Language {
+public class LanguageVocabulary {
 
     String[] actionBarTitle = new String[5];
     String[] options = new String[2];
@@ -12,6 +12,7 @@ public class Language {
     String[] menuBottom = new String[3];
     String[] toastMessage = new String[2];
     String[] database = new String[2];
+    int[] flag = {R.drawable.poland, R.drawable.germany, R.drawable.united_kingdom, R.drawable.france, R.drawable.russia, R.drawable.spain};
     void setPolish(){
         spinnerChoose = new String[]{"Wybierz grupę","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
         languageChoose =new String[]{"Polski", "Niemiecki", "Angielski", "Francuski","Rosyjski","Hiszpański"};

@@ -32,75 +32,79 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
+            <GridLayout
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:rowCount="3"
+                android:columnCount="1"
                 android:orientation="vertical">
                 <LinearLayout
+                    android:layout_gravity="center"
                     android:id="@+id/changeHomeScreenFragment"
                     android:layout_marginBottom="43sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
                     <ImageView
-                        android:layout_marginEnd="12sp"
-                        android:layout_width="42sp"
-                        android:layout_height="42sp"
+                        android:layout_gravity="center"
+                        android:layout_width="100sp"
+                        android:layout_height="100sp"
                         android:src="@drawable/baseline_home_24"
                         android:contentDescription="@string/app_name" />
                     <TextView
                         android:id="@+id/titleHome"
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        android:textSize="32sp"
+                        android:textSize="22sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/strona_g_wna"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:layout_gravity="center"
                     android:id="@+id/editProfile"
                     android:layout_marginBottom="43sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
                     <ImageView
-                        android:layout_marginEnd="12sp"
-                        android:layout_width="42sp"
-                        android:layout_height="42sp"
+                        android:layout_gravity="center"
+                        android:layout_width="100sp"
+                        android:layout_height="100sp"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/baseline_person_24"/>
                     <TextView
+                        android:layout_gravity="center"
                         android:id="@+id/editProfileText"
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        android:textSize="32sp"
+                        android:textSize="22sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/edytuj_profil"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:layout_gravity="center"
                     android:id="@+id/languageSet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
                     <ImageView
-                        android:layout_marginEnd="12sp"
-                        android:layout_width="42sp"
-                        android:layout_height="42sp"
+                        android:layout_gravity="center"
+                        android:layout_width="100sp"
+                        android:layout_height="100sp"
                         android:src="@drawable/baseline_language_24"
                         android:contentDescription="@string/app_name" />
                     <TextView
+                        android:layout_gravity="center"
                         android:id="@+id/changeLanguage"
                         android:textColor="#000000"
-                        android:textStyle="bold"
-                        android:textSize="32sp"
+                        android:textSize="22sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/zmie_j_zyk"/>
                 </LinearLayout>
-            </LinearLayout>
+            </GridLayout>
         </RelativeLayout>
 
     </LinearLayout>

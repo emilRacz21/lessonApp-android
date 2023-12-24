@@ -52,6 +52,7 @@ public class EditProfileFragment extends Fragment {
         fragmentEditProfileBinding.buttonAccept.setOnClickListener(view1 -> addDB(dataBase));
         fragmentEditProfileBinding.buttonDel.setOnClickListener(view1 -> deleteDB(dataBase));
         fragmentEditProfileBinding.backArrow.setOnClickListener(view1 -> ((MainActivity)getActivity()).setFragment(new MoreFragment()));
+        updateList(dataBase);
         return view;
     }
     void setHintText(){

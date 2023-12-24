@@ -46,6 +46,7 @@ public class HomeFragment extends Fragment {
         fragmentHomeBinding.nextText.setText(languageVocabulary.home[2]);
         fragmentHomeBinding.emptyLessonText.setText(languageVocabulary.home[3]);
         fragmentHomeBinding.showMoreText.setText(languageVocabulary.home[4]);
+        fragmentHomeBinding.showMoreText.setOnClickListener( view1 -> ((MainActivity)getActivity()).setFragment(new LessonFragment()));
 
         ((MainActivity)getActivity()).setActionBar(languageVocabulary.actionBarTitle[0], R.drawable.baseline_home_24);
 

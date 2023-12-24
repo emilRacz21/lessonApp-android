@@ -12,6 +12,7 @@ public class LanguageVocabulary {
     String[] menuBottom = new String[3];
     String[] toastMessage = new String[2];
     String[] database = new String[2];
+    String[] dialog = new String[4];
     int[] flag = {R.drawable.poland, R.drawable.germany, R.drawable.united_kingdom, R.drawable.france, R.drawable.russia, R.drawable.spain};
     void setPolish(){
         spinnerChoose = new String[]{"Wybierz grupę","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -19,11 +20,12 @@ public class LanguageVocabulary {
         home = new String[]{" DZISIEJSZE ZAJĘCIA ", "POPRZEDNI", "NASTĘPNY","Brak zajęć w podanym terminie", "ZOBACZ WSZYTSKIE ZAJĘCIA"};
         options = new String[]{"Wybierz opcje", " Wybierz język "};
         actionBarTitle = new String[]{" Strona główna ", " Zajęcia ", " Oceny ", " Edytuj profil ", " Zmień język ", " Więcej "};
-        editProfileLang = new String[]{"Ogólne informacje","Twój login", "Imię", "Nazwisko", "Telefon", "Dodatkowe informacje", "Hasło", "Powtórz hasło", "ZASTOSUJ", "ANULUJ"};
+        editProfileLang = new String[]{"Ogólne informacje","Twój login", "Imię", "Nazwisko", "Telefon", "Dodatkowe informacje", "Hasło", "Powtórz hasło", "ZASTOSUJ", "USUŃ"};
         menu = new String[]{"Edytuj profil", "Zmień język", "Wyloguj się"};
         menuBottom = new String[]{"Zajęcia", "Oceny", "Więcej"};
         toastMessage = new String[]{"Uzupełnij wszystkie pola!", "Podaj takie same hasła!"};
         database = new String[]{"Login", "Imię", "Nazwisko", "Telefon", "Informacje", "Hasło", "Powtórzone hasło"};
+        dialog = new String[]{"Uwaga","Czy jesteś pewny?","Tak","Nie"};
     }
     void setEnglish(){
         spinnerChoose = new String[]{"Select group","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -31,11 +33,12 @@ public class LanguageVocabulary {
         home = new String[]{"TODAY'S CLASSES", "PREVIOUS", "NEXT", "No classes in the given term", "SEE ALL CLASSES"};
         options = new String[]{" Choose options ", " Choose language "};
         actionBarTitle = new String[]{" Home ", " Lesson ", " Grades ", " change profile ", " change language ", " More options "};
-        editProfileLang = new String[]{"General Information", "Your Username", "First Name", "Last Name", "Phone", "Additional Information", "Password", "Repeat Password", "APPLY", "CANCEL"};
+        editProfileLang = new String[]{"General Information", "Your Username", "First Name", "Last Name", "Phone", "Additional Information", "Password", "Repeat Password", "APPLY", "DELETE"};
         menu = new String[]{"Edit Profile", "Change Language", "Log Out"};
         menuBottom = new String[]{"Classes", "Grades", "More"};
         toastMessage = new String[]{"Fill in all fields!", "Enter the same passwords!"};
         database = new String[]{"Login", "First Name", "Last Name", "Phone", "Information", "Password", "Repeated Password"};
+        dialog = new String[]{"Warning","Are you sure?","Yes","No"};
     }
     void setGerman(){
         spinnerChoose = new String[]{"Gruppe auswählen","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -43,11 +46,12 @@ public class LanguageVocabulary {
         home = new String[]{"HEUTIGER UNTERRICHT", "VORHERIGE", "NÄCHSTE", "Kein Unterricht im angegebenen Zeitraum", "ALLE KURSE ANZEIGEN"};
         options = new String[]{"Optionen auswählen", "Sprache auswählen"};
         actionBarTitle = new String[]{" Startseite ", " Kurse ", " Noten ", " Profil bearbeiten ", " Sprache ändern ", " Mehr "};
-        editProfileLang = new String[]{"Allgemeine Informationen", "Dein Benutzername", "Vorname", "Nachname", "Telefon", "Zusätzliche Informationen", "Passwort", "Passwort wiederholen", "ANWENDEN", "ABBRECHEN"};
+        editProfileLang = new String[]{"Allgemeine Informationen", "Dein Benutzername", "Vorname", "Nachname", "Telefon", "Zusätzliche Informationen", "Passwort", "Passwort wiederholen", "ANWENDEN", "LÖSCHEN"};
         menu = new String[]{"Profil bearbeiten", "Sprache ändern", "Abmelden"};
         menuBottom = new String[]{"Stunden", "Noten", "Mehr"};
         toastMessage = new String[]{"Füllen Sie alle Felder aus!", "Geben Sie dieselben Passwörter ein!"};
         database = new String[]{"Login", "Vorname", "Nachname", "Telefon", "Informationen", "Passwort", "Wiederholtes Passwort"};
+        dialog = new String[]{"Achtung","Bist du sicher?","Ja","Nein"};
     }
     void setFrench(){
         spinnerChoose = new String[]{"Choisissez un groupe", "1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -61,6 +65,7 @@ public class LanguageVocabulary {
         toastMessage = new String[]{"Remplissez tous les champs !", "Entrez les mêmes mots de passe !"};
         database = new String[]{"Titre", "Auteur"};
         database = new String[]{"Login", "Prénom", "Nom de famille", "Téléphone", "Informations", "Mot de passe", "Mot de passe répété"};
+        dialog = new String[]{"Attention", "Êtes-vous sûr ?", "Oui", "Non"};
     }
     void setRussian(){
         spinnerChoose = new String[]{"Выберите группу","1А", "1Б", "1В", "1Г", "2А", "2Б", "2В", "2Г", "3А", "3Б", "3В", "3Г"};
@@ -74,6 +79,7 @@ public class LanguageVocabulary {
         toastMessage = new String[]{"Заполните все поля!", "Введите одинаковые пароли!"};
         database = new String[]{"Заголовок", "Автор"};
         database = new String[]{"Логин", "Имя", "Фамилия", "Телефон", "Информация", "Пароль", "Повторите пароль"};
+        dialog = new String[]{"Предупреждение", "Вы уверены?", "Да", "Нет"};
     }
 
     void setSpain(){
@@ -87,5 +93,7 @@ public class LanguageVocabulary {
         menuBottom = new String[]{"Clases", "Calificaciones", "Más"};
         toastMessage = new String[]{"¡Complete todos los campos!", "¡Ingrese las mismas contraseñas!"};
         database = new String[]{"Login", "Nombre", "Apellido", "Teléfono", "Información", "Contraseña", "Repetir Contraseña"};
+        dialog = new String[]{"Advertencia", "¿Estás seguro?", "Sí", "No"};
+
     }
 }

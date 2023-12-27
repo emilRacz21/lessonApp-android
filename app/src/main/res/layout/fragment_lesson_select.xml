@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAccent"
+    tools:context=".LessonSelectFragment">
+
+    <GridLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="72sp"
+        android:rowCount="2"
+        android:columnCount="2">
+        <ImageView
+            android:layout_marginTop="15sp"
+            android:layout_marginEnd="26sp"
+            android:layout_marginStart="26sp"
+            android:id="@+id/backArrow"
+            android:layout_width="30sp"
+            android:layout_height="40sp"
+            android:src="@drawable/back"/>
+        <TextView
+            android:layout_marginTop="15sp"
+            android:textColor="@color/black"
+            android:id="@+id/textMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="33sp"
+            android:textStyle="bold"
+            android:text="@string/witam"/>
+    </GridLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginEnd="22sp"
+            android:id="@+id/viewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

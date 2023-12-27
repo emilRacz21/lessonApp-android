@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+
 import com.example.bar.databinding.FragmentLessonBinding;
 
 import java.text.SimpleDateFormat;
@@ -23,24 +25,6 @@ public class LessonFragment extends Fragment {
     FragmentLessonBinding fragmentLessonBinding;
     List<LessonList> lessonList = new ArrayList<>();
     public LessonFragment() {}
-    public static LessonFragment newInstance(String param1, String param2) {
-        LessonFragment fragment = new LessonFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -48,13 +32,28 @@ public class LessonFragment extends Fragment {
         View view = fragmentLessonBinding.getRoot();
         LanguageVocabulary languageVocabulary = new LanguageVocabulary();
         printDays();
-        CustomLessonAdapter customLessonAdapter = new CustomLessonAdapter(lessonList,getContext());
+        CustomLessonAdapter customLessonAdapter = new CustomLessonAdapter(lessonList, getContext());
         fragmentLessonBinding.listView.setAdapter(customLessonAdapter);
-        choosedLang = ((MainActivity)getActivity()).value;
-        ((MainActivity)getActivity()).setLanguage(choosedLang, languageVocabulary);
-        ((MainActivity)getActivity()).setActionBar(languageVocabulary.actionBarTitle[1], R.drawable.baseline_calendar_month_24);
+        choosedLang = ((MainActivity) getActivity()).value;
+        fragmentLessonBinding.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ((MainActivity) getActivity()).setFragment(new LessonSelectFragment());
+                System.out.println(lessonList.get(position).data1);
+                System.out.println(lessonList.get(position).data2);
+
+                Bundle bundle = new Bundle();
+                bundle.putString("monday", String.valueOf(convertToUnixTimestamp(lessonList.get(position).data1)));
+                bundle.putString("friday", String.valueOf(convertToUnixTimestamp(lessonList.get(position).data2)));
+                getParentFragmentManager().setFragmentResult("lessons", bundle);
+
+            }
+        });
+        ((MainActivity) getActivity()).setLanguage(choosedLang, languageVocabulary);
+        ((MainActivity) getActivity()).setActionBar(languageVocabulary.actionBarTitle[1], R.drawable.baseline_calendar_month_24);
         return view;
     }
+
     void printDays() {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
@@ -66,6 +65,17 @@ public class LessonFragment extends Fragment {
             String formattedDateFriday = dateFormat.format(calendar.getTime());
             lessonList.add(new LessonList(formattedDateMonday, formattedDateFriday));
             calendar.add(Calendar.WEEK_OF_YEAR, 1);
+        }
+    }
+
+    private long convertToUnixTimestamp(String dateStr) {
+        try {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
+            Date date = dateFormat.parse(dateStr);
+            return date.getTime() / 1000; // converting milliseconds to seconds
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
         }
     }
 }

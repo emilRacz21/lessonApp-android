@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Bar</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Schedule</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="witam">witam</string>
     <string name="poland">Poland</string>
@@ -36,4 +35,10 @@
     <string name="obecno">Obecność</string>
     <string name="lista_realizacji_zaj">Lista realizacji zajęć</string>
     <string name="brak_element_w_do_wy_wietlenia">Brak elementów do wyświetlenia</string>
+    <string name="wyloguj_si">Wyloguj się</string>
+    <string name="oceny">Oceny</string>
+    <string name="zaj_cia">Zajęcia</string>
+    <string name="wi_cej">Więcej</string>
+    <string name="wybierz_j_zyk">Wybierz język</string>
+    <string name="_17_09_2023_23_09_2023">17.09.2023 - 23.09.2023</string>
 </resources>

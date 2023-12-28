@@ -20,7 +20,8 @@
             android:id="@+id/backArrow"
             android:layout_width="30sp"
             android:layout_height="40sp"
-            android:src="@drawable/back"/>
+            android:src="@drawable/arrow_back"
+            android:contentDescription="@string/app_name" />
         <TextView
             android:layout_marginTop="20sp"
             android:textColor="@color/black"
@@ -39,7 +40,8 @@
             android:id="@+id/viewGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

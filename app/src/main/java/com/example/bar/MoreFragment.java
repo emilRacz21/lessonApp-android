@@ -1,6 +1,8 @@
 package com.example.bar;
 
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,34 +10,16 @@ import android.view.ViewGroup;
 import com.example.bar.databinding.FragmentMoreBinding;
 public class MoreFragment extends Fragment {
     FragmentMoreBinding fragmentMoreBinding;
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-    private String mParam1;
-    private String mParam2;
     int choosedLang;
     public MoreFragment() {}
-
-    public static MoreFragment newInstance(String param1, String param2) {
-        MoreFragment fragment = new MoreFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         fragmentMoreBinding = FragmentMoreBinding.inflate(inflater, container, false);
         View view = fragmentMoreBinding.getRoot();
 
@@ -45,18 +29,9 @@ public class MoreFragment extends Fragment {
 
         setLang(languageVocabulary);
 
-        fragmentMoreBinding.changeHomeScreenFragment.setOnClickListener( view1 ->{
-            ((MainActivity)getActivity()).setFragment(new HomeFragment());
-        });
-
-        fragmentMoreBinding.editProfile.setOnClickListener( view1 ->{
-            ((MainActivity)getActivity()).setFragment(new EditProfileFragment());
-        });
-
-        fragmentMoreBinding.languageSet.setOnClickListener( view1->{
-            ((MainActivity)getActivity()).setFragment(new LanguageFragment());
-        });
-
+        fragmentMoreBinding.changeHomeScreenFragment.setOnClickListener( view1 -> ((MainActivity)getActivity()).setFragment(new HomeFragment()));
+        fragmentMoreBinding.editProfile.setOnClickListener( view1 -> ((MainActivity)getActivity()).setFragment(new EditProfileFragment()));
+        fragmentMoreBinding.languageSet.setOnClickListener( view1-> ((MainActivity)getActivity()).setFragment(new LanguageFragment()));
         return view;
     }
 

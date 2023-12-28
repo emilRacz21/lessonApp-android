@@ -2,23 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#F1F1F1"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MoreFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/optionsText"
-        android:layout_marginTop="52sp"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52sp"
+        android:text="@string/wybierz_opcje"
+        android:textColor="@color/colorPrimary"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:text="@string/wybierz_opcje"
-        tools:ignore="VisualLintOverlap" />
+        tools:ignore="VisualLintOverlap,TextContrastCheck" />
 
     <LinearLayout
         android:layout_centerVertical="true"
@@ -30,7 +29,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
 
             <GridLayout
                 android:layout_centerHorizontal="true"
@@ -39,14 +39,16 @@
                 android:layout_height="wrap_content"
                 android:rowCount="3"
                 android:columnCount="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
                 <LinearLayout
                     android:layout_gravity="center"
                     android:id="@+id/changeHomeScreenFragment"
                     android:layout_marginBottom="43sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
                         android:layout_gravity="center"
                         android:layout_width="100sp"
@@ -56,7 +58,7 @@
                     <TextView
                         android:layout_gravity="center"
                         android:id="@+id/titleHome"
-                        android:textColor="#000000"
+                        android:textColor="@color/black"
                         android:textSize="22sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -68,7 +70,8 @@
                     android:layout_marginBottom="43sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
                         android:layout_gravity="center"
                         android:layout_width="100sp"
@@ -78,7 +81,7 @@
                     <TextView
                         android:layout_gravity="center"
                         android:id="@+id/editProfileText"
-                        android:textColor="#000000"
+                        android:textColor="@color/black"
                         android:textSize="22sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -89,7 +92,8 @@
                     android:id="@+id/languageSet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
                         android:layout_gravity="center"
                         android:layout_width="100sp"
@@ -99,7 +103,7 @@
                     <TextView
                         android:layout_gravity="center"
                         android:id="@+id/changeLanguage"
-                        android:textColor="#000000"
+                        android:textColor="@color/black"
                         android:textSize="22sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

@@ -4,51 +4,27 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentResultListener;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.example.bar.databinding.FragmentLessonSelectBinding;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 public class LessonSelectFragment extends Fragment {
-
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
     String monday;
     String friday;
     FragmentLessonSelectBinding fragmentLessonSelectBinding;
     public LessonSelectFragment() {}
 
-    public static LessonSelectFragment newInstance(String param1, String param2) {
-        LessonSelectFragment fragment = new LessonSelectFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         fragmentLessonSelectBinding = FragmentLessonSelectBinding.inflate(getLayoutInflater());
         View view = fragmentLessonSelectBinding.getRoot();
@@ -83,14 +59,12 @@ public class LessonSelectFragment extends Fragment {
     private String getFormattedNextDay(String unixTimestamp, int daysToAdd) {
         long timestamp = Long.parseLong(unixTimestamp) * 1000;
         Date date = new Date(timestamp + daysToAdd * 24 * 60 * 60 * 1000);
-//        SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy", Locale.getDefault());
         SimpleDateFormat sdf = new SimpleDateFormat("dd", Locale.getDefault());
         return sdf.format(date);
     }
     private String getCurrentMonth(String unixTimestamp, int daysToAdd) {
         long timestamp = Long.parseLong(unixTimestamp) * 1000;
         Date date = new Date(timestamp + daysToAdd * 24 * 60 * 60 * 1000);
-//        SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy", Locale.getDefault());
         SimpleDateFormat sdf = new SimpleDateFormat("MMMM yyyy", Locale.getDefault());
         return sdf.format(date).toUpperCase();
     }

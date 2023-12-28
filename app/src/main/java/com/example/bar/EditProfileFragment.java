@@ -1,10 +1,10 @@
 package com.example.bar;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,34 +13,18 @@ import android.widget.Toast;
 import com.example.bar.databinding.FragmentEditProfileBinding;
 
 public class EditProfileFragment extends Fragment {
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
     FragmentEditProfileBinding fragmentEditProfileBinding;
-    private String mParam1;
-    private String mParam2;
     LanguageVocabulary languageVocabulary = new LanguageVocabulary();
     int choosedLang;
     public EditProfileFragment() {}
-    public static EditProfileFragment newInstance(String param1, String param2) {
-        EditProfileFragment fragment = new EditProfileFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         fragmentEditProfileBinding = FragmentEditProfileBinding.inflate(inflater, container, false);
         View view = fragmentEditProfileBinding.getRoot();

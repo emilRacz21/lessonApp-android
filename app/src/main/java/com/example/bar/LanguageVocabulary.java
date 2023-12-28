@@ -13,7 +13,7 @@ public class LanguageVocabulary {
     String[] toastMessage = new String[2];
     String[] database = new String[2];
     String[] dialog = new String[4];
-    int[] flag = {R.drawable.poland, R.drawable.germany, R.drawable.united_kingdom, R.drawable.france, R.drawable.russia, R.drawable.spain};
+    int[] flag = {R.drawable.flag_poland, R.drawable.flag_germany, R.drawable.flag_united_kingdom, R.drawable.flag_france, R.drawable.flag_russia, R.drawable.flag_spain};
     void setPolish(){
         spinnerChoose = new String[]{"Wybierz grupę","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
         languageChoose =new String[]{"Polski", "Niemiecki", "Angielski", "Francuski","Rosyjski","Hiszpański"};

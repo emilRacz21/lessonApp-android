@@ -33,7 +33,7 @@ public class CustomLessonAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         if(convertView == null){
-            convertView= inflater.inflate(R.layout.list_layout,parent,false);
+            convertView= inflater.inflate(R.layout.custom_list_layout,parent,false);
         }
         LessonList lessonList = this.lessonList.get(position);
         TextView text = convertView.findViewById(R.id.textList);

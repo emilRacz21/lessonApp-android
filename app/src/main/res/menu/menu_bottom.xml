@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/lessons"
-        android:title="Zajęcia"
+        android:title="@string/zaj_cia"
         android:icon="@drawable/baseline_calendar_month_24"/>
     <item
         android:id="@+id/grades"
-        android:title="Oceny"
+        android:title="@string/oceny"
         android:icon="@drawable/baseline_plus_one_24"/>
     <item
         android:id="@+id/more"
-        android:title="Więcej"
+        android:title="@string/wi_cej"
         android:icon="@drawable/baseline_more_horiz_24"/>
 </menu>

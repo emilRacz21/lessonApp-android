@@ -1,5 +1,4 @@
 package com.example.bar;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -16,7 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import com.example.bar.databinding.ActivityMainBinding;
-import com.google.android.material.navigation.NavigationBarView;
 import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,22 +43,18 @@ public class MainActivity extends AppCompatActivity {
 
         setBottomMenu();
 
-        activityMainBinding.bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        activityMainBinding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
-                if(item.getItemId() == R.id.lessons){
-                    setFragment(new LessonFragment());
-                }
-                else if(item.getItemId() == R.id.grades){
-                    setFragment(new GradesFragment());
-                }else if(item.getItemId() == R.id.more){
-                    setFragment(new MoreFragment());
-                }
-                return true;
+            if(item.getItemId() == R.id.lessons){
+                setFragment(new LessonFragment());
             }
+            else if(item.getItemId() == R.id.grades){
+                setFragment(new GradesFragment());
+            }else if(item.getItemId() == R.id.more){
+                setFragment(new MoreFragment());
+            }
+            return true;
         });
-
 
     }
 
@@ -71,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.menu_top, menu);
         for(int i = 0; i < languageVocabulary.menu.length; i++){
             menu.getItem(i).setTitle(languageVocabulary.menu[i]);
         }
@@ -134,5 +128,4 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
 }

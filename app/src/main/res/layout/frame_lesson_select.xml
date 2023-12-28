@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:rowCount="2"
@@ -29,92 +30,107 @@
                     android:layout_height="wrap_content" />
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/layoutDetails"
             android:layout_width="390sp"
             android:layout_height="220sp"
-            android:orientation="vertical"
             android:layout_marginTop="13sp"
-            android:background="@drawable/radius_lesson">
+            android:background="@drawable/radius_lesson"
+            android:orientation="vertical"
+            tools:ignore="TextSizeCheck,VisualLintBounds">
 
                 <GridLayout
-                    android:layout_marginStart="20sp"
-                    android:layout_marginTop="30sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                        android:rowCount="1"
-                        android:columnCount="3">
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="30sp"
+                    android:columnCount="3"
+                    android:rowCount="1">
+
                         <TextView
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="17sp"
-                            android:text="@string/_10_00_10_30"/>
-                        <ImageView
-                                android:layout_width="30sp"
-                                android:layout_height="30sp"
-                                android:src="@drawable/baseline_av_timer_24"
-                                android:contentDescription="@string/app_name" />
-                        <TextView
+                            android:text="@string/_10_00_10_30"
+                            android:textColor="@color/black"
                             android:textSize="22sp"
-                            android:textColor="@color/colorGray"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/baseline_av_timer_24"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/_30"/>
+                            android:text="@string/_30"
+                            android:textColor="@color/colorGray"
+                            android:textSize="22sp"
+                            tools:ignore="TextContrastCheck" />
                 </GridLayout>
 
                 <GridLayout
-                    android:layout_marginStart="20sp"
-                    android:layout_marginTop="22sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:rowCount="1"
-                    android:columnCount="3">
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="22sp"
+                    android:columnCount="3"
+                    android:rowCount="1">
 
                         <ImageView
-                            android:layout_gravity="center"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
+                            android:layout_gravity="center"
                             android:contentDescription="@string/app_name"
-                            android:src="@drawable/baseline_beenhere_24"/>
+                            android:src="@drawable/baseline_beenhere_24"
+                            tools:ignore="ImageContrastCheck" />
+
                         <TextView
-                            android:layout_marginStart="12sp"
-                            android:textSize="18sp"
-                            android:textColor="@color/colorGray"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka"/>
-                        <ImageView
-                            android:contentDescription="@string/app_name"
                             android:layout_marginStart="12sp"
-                            android:layout_gravity="center"
+                            android:text="@string/przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka"
+                            android:textColor="@color/colorGray"
+                            android:textSize="18sp"
+                            tools:ignore="TextContrastCheck" />
+
+                        <ImageView
                             android:layout_width="30sp"
                             android:layout_height="30sp"
-                            android:src="@drawable/baseline_location_on_24"/>
+                            android:layout_gravity="center"
+                            android:layout_marginStart="12sp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/baseline_location_on_24"
+                            tools:ignore="ImageContrastCheck" />
                 </GridLayout>
 
                 <LinearLayout
-                    android:layout_marginTop="22sp"
-                    android:layout_marginStart="20sp"
                     android:layout_width="150sp"
                     android:layout_height="40sp"
-                    android:background="@drawable/accept">
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="22sp"
+                    android:background="@drawable/radius_accept">
+
                         <ImageView
-                            android:contentDescription="@string/app_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginStart="12sp"
-                            android:layout_gravity="center"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/baseline_check_24"/>
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/baseline_check_24" />
+
                         <TextView
-                            android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:text="@string/obecno"
                             android:textColor="@color/colorGreen"
-                            android:text="@string/obecno"/>
+                            android:textSize="18sp"
+                            tools:ignore="TextContrastCheck" />
 
                 </LinearLayout>
         </LinearLayout>

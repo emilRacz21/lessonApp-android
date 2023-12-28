@@ -29,7 +29,8 @@
                 android:layout_marginStart="26sp"
                 android:layout_width="30sp"
                 android:layout_height="40sp"
-                android:src="@drawable/back"/>
+                android:src="@drawable/arrow_back"
+                android:contentDescription="@string/app_name" />
             <TextView
                 android:layout_gravity="center"
                 android:textColor="@color/black"
@@ -39,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="33sp"
                 android:textStyle="bold"
-                android:text="Wybierz język"/>
+                android:text="@string/wybierz_j_zyk"/>
         </GridLayout>
 
         <GridView

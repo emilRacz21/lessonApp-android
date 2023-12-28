@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/radius_lesson1"
+    android:layout_height="82sp">
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginStart="27sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_17_09_2023_23_09_2023"
+        android:id="@+id/textList"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="422sp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/baseline_lesson_up"
+        android:contentDescription="@string/app_name"
+        tools:ignore="VisualLintBounds" />
+</RelativeLayout>

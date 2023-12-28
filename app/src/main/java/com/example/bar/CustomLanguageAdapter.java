@@ -35,7 +35,7 @@ public class CustomLanguageAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.grid_layout, parent, false);
+            convertView = inflater.inflate(R.layout.custom_grid_layout, parent, false);
         }
         TextView lang1 = convertView.findViewById(R.id.langName);
         lang1.setText(lang[position]);

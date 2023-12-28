@@ -10,13 +10,14 @@
         android:id="@+id/todayLessons"
         android:layout_marginTop="12sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:layout_marginStart="10sp"
             android:layout_width="36sp"
             android:layout_height="36sp"
-            android:src="@drawable/home_callendar"
+            android:src="@drawable/baseline_home_callendar"
             android:contentDescription="@string/app_name" />
         <TextView
             android:id="@+id/textTopLesson"
@@ -55,7 +56,7 @@
             android:layout_marginStart="10sp"
             android:layout_width="170sp"
             android:layout_height="wrap_content"
-            android:src="@drawable/home_today"/>
+            android:src="@drawable/baseline_home_today"/>
 
         <TextView
             android:id="@+id/nextText"

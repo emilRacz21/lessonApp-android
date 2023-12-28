@@ -6,23 +6,20 @@
         android:id="@+id/profile"
         app:showAsAction="never"
         android:orderInCategory="122"
-        android:title="Edytuj profil"
-        android:icon="@drawable/baseline_contact_emergency_24"
-        />
+        android:title="@string/edytuj_profil"
+        android:icon="@drawable/baseline_contact_emergency_24" />
 
     <item
         android:id="@+id/lang"
         app:showAsAction="never"
         android:orderInCategory="140"
-        android:title="zmień język"
-        android:icon="@drawable/baseline_language_24"
-        />
+        android:title="@string/zmie_j_zyk"
+        android:icon="@drawable/baseline_language_24" />
     <item
         android:id="@+id/logout"
         app:showAsAction="never"
         android:orderInCategory="140"
-        android:title="wyloguj się"
-        android:icon="@drawable/baseline_person_24"
-        />
+        android:title="@string/wyloguj_si"
+        android:icon="@drawable/baseline_person_24" />
 
 </menu>

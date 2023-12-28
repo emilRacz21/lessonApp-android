@@ -15,4 +15,35 @@
         android:minWidth="76sp"
         android:minHeight="48dp" />
 
+    <RelativeLayout
+        android:id="@+id/hideLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            tools:ignore="UseCompoundDrawables,UselessParent">
+            <ImageView
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+               android:layout_gravity="center"
+                android:src="@drawable/baseline_category_24"
+                android:contentDescription="@string/app_name" />
+            <TextView
+                android:id="@+id/emptyGrades"
+                android:layout_marginTop="12sp"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brak_element_w_do_wy_wietlenia"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
 </LinearLayout>

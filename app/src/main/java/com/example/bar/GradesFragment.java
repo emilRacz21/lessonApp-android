@@ -48,6 +48,7 @@ public class GradesFragment extends Fragment {
         ((MainActivity)getActivity()).setActionBar(languageVocabulary.actionBarTitle[2], R.drawable.baseline_plus_one_24);
         CustomSpinnerAdapter customSpinnerAdapter = new CustomSpinnerAdapter(languageVocabulary.spinnerChoose, getContext());
         fragmentGradesBinding.spinnerGrades.setAdapter(customSpinnerAdapter);
+        fragmentGradesBinding.emptyGrades.setText(languageVocabulary.menuBottom[4]);
 
         fragmentGradesBinding.spinnerGrades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

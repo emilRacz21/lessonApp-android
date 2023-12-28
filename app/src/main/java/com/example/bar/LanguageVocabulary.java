@@ -9,7 +9,7 @@ public class LanguageVocabulary {
     String[] spinnerChoose = new String[1];
     String[] editProfileLang = new String[10];
     String[] menu = new String[3];
-    String[] menuBottom = new String[4];
+    String[] menuBottom = new String[5];
     String[] toastMessage = new String[2];
     String[] database = new String[2];
     String[] dialog = new String[4];
@@ -22,7 +22,7 @@ public class LanguageVocabulary {
         actionBarTitle = new String[]{" Strona główna ", " Zajęcia ", " Oceny ", " Edytuj profil ", " Zmień język ", " Więcej "};
         editProfileLang = new String[]{"Ogólne informacje","Twój login", "Imię", "Nazwisko", "Telefon", "Dodatkowe informacje", "Hasło", "Powtórz hasło", "ZASTOSUJ", "USUŃ"};
         menu = new String[]{"Edytuj profil", "Zmień język", "Wyloguj się"};
-        menuBottom = new String[]{"Zajęcia", "Oceny", "Więcej","Lista realizacji zajęć"};
+        menuBottom = new String[]{"Zajęcia", "Oceny", "Więcej","Lista realizacji zajęć", "Brak elementów do wyświetlenia"};
         toastMessage = new String[]{"Uzupełnij wszystkie pola!", "Podaj takie same hasła!"};
         database = new String[]{"Login", "Imię", "Nazwisko", "Telefon", "Informacje", "Hasło", "Powtórzone hasło"};
         dialog = new String[]{"Uwaga","Czy jesteś pewny?","Tak","Nie"};
@@ -35,7 +35,7 @@ public class LanguageVocabulary {
         actionBarTitle = new String[]{" Home ", " Lesson ", " Grades ", " change profile ", " change language ", " More options "};
         editProfileLang = new String[]{"General Information", "Your Username", "First Name", "Last Name", "Phone", "Additional Information", "Password", "Repeat Password", "APPLY", "DELETE"};
         menu = new String[]{"Edit Profile", "Change Language", "Log Out"};
-        menuBottom = new String[]{"Classes", "Grades", "More", "List of completed classes"};
+        menuBottom = new String[]{"Classes", "Grades", "More", "List of Classes Achievements", "No items to display"};
         toastMessage = new String[]{"Fill in all fields!", "Enter the same passwords!"};
         database = new String[]{"Login", "First Name", "Last Name", "Phone", "Information", "Password", "Repeated Password"};
         dialog = new String[]{"Warning","Are you sure?","Yes","No"};
@@ -48,7 +48,7 @@ public class LanguageVocabulary {
         actionBarTitle = new String[]{" Startseite ", " Kurse ", " Noten ", " Profil bearbeiten ", " Sprache ändern ", " Mehr "};
         editProfileLang = new String[]{"Informationen", "Dein Benutzername", "Vorname", "Nachname", "Telefon", "Zusätzliche Informationen", "Passwort", "Passwort wiederholen", "ANWENDEN", "LÖSCHEN"};
         menu = new String[]{"Profil bearbeiten", "Sprache ändern", "Abmelden"};
-        menuBottom = new String[]{"Unterricht", "Noten", "Mehr", "Der abgeschlossenen Kurse"};
+        menuBottom = new String[]{"Unterricht", "Noten", "Mehr", "Der abgeschlossenen Kurse", "Keine Elemente zum Anzeigen"};
         toastMessage = new String[]{"Füllen Sie alle Felder aus!", "Geben Sie dieselben Passwörter ein!"};
         database = new String[]{"Login", "Vorname", "Nachname", "Telefon", "Informationen", "Passwort", "Wiederholtes Passwort"};
         dialog = new String[]{"Achtung","Bist du sicher?","Ja","Nein"};
@@ -61,7 +61,7 @@ public class LanguageVocabulary {
         actionBarTitle = new String[]{" Page d'accueil ", " Cours ", " Notes ", " Modifier le profil ", " Changer de langue ", " Plus "};
         editProfileLang = new String[]{"Informations générales", "Votre nom d'utilisateur", "Prénom", "Nom de famille", "Téléphone", "Informations supplémentaires", "Mot de passe", "Répéter le mot de passe", "APPLIQUER", "ANNULER"};
         menu = new String[]{"Modifier le profil", "Changer de langue", "Déconnexion"};
-        menuBottom = new String[]{"Cours", "Notes", "Plus", "Liste des cours terminés"};
+        menuBottom = new String[]{"Cours", "Notes", "Plus", "Liste des cours terminés", "Aucun élément à afficher"};
         toastMessage = new String[]{"Remplissez tous les champs !", "Entrez les mêmes mots de passe !"};
         database = new String[]{"Titre", "Auteur"};
         database = new String[]{"Login", "Prénom", "Nom de famille", "Téléphone", "Informations", "Mot de passe", "Mot de passe répété"};
@@ -75,7 +75,7 @@ public class LanguageVocabulary {
         actionBarTitle = new String[]{" Главная страница ", " Занятия ", " Оценки ", " Редактировать профиль ", " Изменить язык ", " Еще "};
         editProfileLang = new String[]{"Общая информация","Ваш логин", "Имя", "Фамилия", "Телефон", "Дополнительная информация", "Пароль", "Повторите пароль", "ПРИМЕНИТЬ", "ОТМЕНА"};
         menu = new String[]{"Редактировать профиль", "Изменить язык", "Выйти"};
-        menuBottom = new String[]{"Занятия", "Оценки", "Ещё", "Список занятий"};
+        menuBottom = new String[]{"Занятия", "Оценки", "Ещё", "Список занятий", "Нет элементов для отображения"};
         toastMessage = new String[]{"Заполните все поля!", "Введите одинаковые пароли!"};
         database = new String[]{"Заголовок", "Автор"};
         database = new String[]{"Логин", "Имя", "Фамилия", "Телефон", "Информация", "Пароль", "Повторите пароль"};
@@ -90,7 +90,7 @@ public class LanguageVocabulary {
         actionBarTitle = new String[]{" Página principal ", " Clases ", " Calificaciones ", " Editar perfil ", " Cambiar idioma ", " Más "};
         editProfileLang = new String[]{"Información general", "Tu nombre de usuario", "Nombre", "Apellido", "Teléfono", "Información adicional", "Contraseña", "Repetir contraseña", "APLICAR", "CANCELAR"};
         menu = new String[]{"Editar perfil", "Cambiar idioma", "Cerrar sesión"};
-        menuBottom = new String[]{"Clases", "Calificaciones", "Más", "Lista de clases completadas"};
+        menuBottom = new String[]{"Clases", "Calificaciones", "Más", "Lista de clases completadas", "No hay elementos para mostrar"};
         toastMessage = new String[]{"¡Complete todos los campos!", "¡Ingrese las mismas contraseñas!"};
         database = new String[]{"Login", "Nombre", "Apellido", "Teléfono", "Información", "Contraseña", "Repetir Contraseña"};
         dialog = new String[]{"Advertencia", "¿Estás seguro?", "Sí", "No"};

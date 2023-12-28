@@ -13,7 +13,7 @@
         android:layout_marginTop="125sp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/radius_lesson"
+        android:background="@drawable/radius_lesson1"
         android:layout_width="430sp"
         android:layout_height="match_parent"
         android:orientation="vertical">

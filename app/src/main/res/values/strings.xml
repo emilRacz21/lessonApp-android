@@ -35,4 +35,5 @@
     <string name="przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka">Przedszkole samorządowe nr 1 \n Im. Jana Nowaka</string>
     <string name="obecno">Obecność</string>
     <string name="lista_realizacji_zaj">Lista realizacji zajęć</string>
+    <string name="brak_element_w_do_wy_wietlenia">Brak elementów do wyświetlenia</string>
 </resources>

@@ -30,4 +30,9 @@
     <string name="spinner">spinner</string>
     <string name="dodatkowe_informacje">Dodatkowe informacje</string>
     <string name="usu">USUŃ</string>
+    <string name="_10_00_10_30">10:00 - 10:30</string>
+    <string name="_30">30</string>
+    <string name="przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka">Przedszkole samorządowe nr 1 \n Im. Jana Nowaka</string>
+    <string name="obecno">Obecność</string>
+    <string name="lista_realizacji_zaj">Lista realizacji zajęć</string>
 </resources>

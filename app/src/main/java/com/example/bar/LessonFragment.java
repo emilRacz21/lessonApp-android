@@ -39,8 +39,6 @@ public class LessonFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ((MainActivity) getActivity()).setFragment(new LessonSelectFragment());
-                System.out.println(lessonList.get(position).data1);
-                System.out.println(lessonList.get(position).data2);
 
                 Bundle bundle = new Bundle();
                 bundle.putString("monday", String.valueOf(convertToUnixTimestamp(lessonList.get(position).data1)));
@@ -50,6 +48,7 @@ public class LessonFragment extends Fragment {
             }
         });
         ((MainActivity) getActivity()).setLanguage(choosedLang, languageVocabulary);
+        fragmentLessonBinding.implementLessons.setText(languageVocabulary.menuBottom[3]);
         ((MainActivity) getActivity()).setActionBar(languageVocabulary.actionBarTitle[1], R.drawable.baseline_calendar_month_24);
         return view;
     }

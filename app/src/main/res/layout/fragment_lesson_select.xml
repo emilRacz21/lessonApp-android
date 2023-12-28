@@ -22,12 +22,12 @@
             android:layout_height="40sp"
             android:src="@drawable/back"/>
         <TextView
-            android:layout_marginTop="15sp"
+            android:layout_marginTop="20sp"
             android:textColor="@color/black"
             android:id="@+id/textMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="33sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             android:text="@string/witam"/>
     </GridLayout>

@@ -4,13 +4,31 @@
     android:layout_height="wrap_content"
     android:rowCount="2"
     android:columnCount="2">
-        <TextView
+        <LinearLayout
+            android:layout_marginEnd="12sp"
             android:layout_marginStart="12sp"
             android:layout_gravity="center"
-            android:textSize="22sp"
-            android:id="@+id/days"
-            android:layout_width="60sp"
-            android:layout_height="wrap_content" />
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="22sp"
+                    android:id="@+id/daysMonth"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/daysNum"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content" />
+
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/layoutDetails"
             android:layout_width="390sp"
@@ -18,12 +36,86 @@
             android:orientation="vertical"
             android:layout_marginTop="13sp"
             android:background="@drawable/radius_lesson">
-                <TextView
+
+                <GridLayout
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="30sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BRAK DANYCH!"
-                    android:textSize="32sp"
-                    android:layout_marginTop="90sp"
-                    android:layout_gravity="center"/>
+                        android:rowCount="1"
+                        android:columnCount="3">
+                        <TextView
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="17sp"
+                            android:text="@string/_10_00_10_30"/>
+                        <ImageView
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:src="@drawable/baseline_av_timer_24"
+                                android:contentDescription="@string/app_name" />
+                        <TextView
+                            android:textSize="22sp"
+                            android:textColor="@color/colorGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_30"/>
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="22sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rowCount="1"
+                    android:columnCount="3">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/baseline_beenhere_24"/>
+                        <TextView
+                            android:layout_marginStart="12sp"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka"/>
+                        <ImageView
+                            android:contentDescription="@string/app_name"
+                            android:layout_marginStart="12sp"
+                            android:layout_gravity="center"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:src="@drawable/baseline_location_on_24"/>
+                </GridLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="22sp"
+                    android:layout_marginStart="20sp"
+                    android:layout_width="150sp"
+                    android:layout_height="40sp"
+                    android:background="@drawable/accept">
+                        <ImageView
+                            android:contentDescription="@string/app_name"
+                            android:layout_marginStart="12sp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_check_24"/>
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorGreen"
+                            android:text="@string/obecno"/>
+
+                </LinearLayout>
         </LinearLayout>
 </GridLayout>

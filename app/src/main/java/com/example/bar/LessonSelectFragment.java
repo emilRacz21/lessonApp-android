@@ -60,8 +60,13 @@ public class LessonSelectFragment extends Fragment {
             for (int i = 0; i < 5; i++) {
                 final View singleFrame = getLayoutInflater().inflate(R.layout.frame_lesson_select, null);
                 singleFrame.setId(i);
-                TextView item = singleFrame.findViewById(R.id.days);
-                item.setText(getDayOfWeek(i) + "\n" + getFormattedNextDay(monday, i));
+
+                TextView dayMonth = singleFrame.findViewById(R.id.daysMonth);
+                dayMonth.setText(getDayOfWeek(i));
+
+                TextView daysNum = singleFrame.findViewById(R.id.daysNum);
+                daysNum.setText(getFormattedNextDay(monday, i));
+
                 fragmentLessonSelectBinding.viewGroup.addView(singleFrame);
             }
             fragmentLessonSelectBinding.textMonth.setText(getCurrentMonth(monday, 0) + "\n");

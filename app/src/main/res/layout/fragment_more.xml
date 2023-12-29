@@ -8,6 +8,7 @@
     tools:context=".MoreFragment">
 
     <TextView
+        android:layout_marginBottom="52sp"
         android:id="@+id/optionsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,9 +21,10 @@
         tools:ignore="VisualLintOverlap,TextContrastCheck" />
 
     <LinearLayout
+        android:layout_below="@id/optionsText"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32sp"
+        android:layout_marginBottom="22sp"
         android:layout_width="360sp"
         android:layout_height="620sp"
         android:background="@drawable/radius_lesson1">

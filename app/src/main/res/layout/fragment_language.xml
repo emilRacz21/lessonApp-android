@@ -1,55 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#F1F1F1"
     android:layout_height="match_parent"
     tools:context=".LanguageFragment">
-
     <LinearLayout
         android:id="@+id/ll1"
         android:layout_marginEnd="22sp"
         android:layout_marginStart="22sp"
-        android:layout_marginTop="125sp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:background="@drawable/radius_lesson1"
-        android:layout_width="430sp"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
         <GridLayout
-            android:layout_marginTop="22sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:rowCount="2"
-            android:columnCount="2">
+            android:columnCount="2"
+            android:layout_marginTop="22sp">
             <ImageView
-                android:layout_gravity="center"
                 android:id="@+id/backArrow"
-                android:layout_marginStart="26sp"
+                android:layout_gravity="center"
                 android:layout_width="30sp"
                 android:layout_height="40sp"
+                android:layout_marginStart="26sp"
                 android:src="@drawable/arrow_back"
                 android:contentDescription="@string/app_name" />
             <TextView
-                android:layout_gravity="center"
-                android:textColor="@color/black"
                 android:id="@+id/languageText"
-                android:layout_marginStart="14sp"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="14sp"
                 android:textSize="33sp"
                 android:textStyle="bold"
-                android:text="@string/wybierz_j_zyk"/>
+                android:text="@string/wybierz_j_zyk"
+                android:textColor="@color/black"/>
         </GridLayout>
 
         <GridView
-            android:verticalSpacing="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="27sp"
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="25sp"
             android:layout_marginTop="22sp"
             android:numColumns="2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/gridView"/>
-            </LinearLayout>
-</RelativeLayout>
+            android:verticalSpacing="20dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

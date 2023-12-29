@@ -11,7 +11,7 @@ public class DatabaseActivity extends SQLiteOpenHelper {
     SQLiteDatabase db = getReadableDatabase();
 
     public DatabaseActivity(@NotNull Context context) {
-        super(context, "profileApp1.db", null, 1);
+        super(context, "profileApp.db", null, 1);
         this.context = context;
     }
 

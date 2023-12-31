@@ -23,7 +23,6 @@ public class DatabaseActivitySchedule extends SQLiteOpenHelper {
                 + " timeBegin text, "
                 + " timeEnd text, "
                 + " schoolName text, "
-                + " month text, "
                 + " activityDate text); ");
     }
 
@@ -33,9 +32,9 @@ public class DatabaseActivitySchedule extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addBook(String timeBegin, String timeEnd, String schoolName, String month, String activityDate) {
-        db.execSQL("insert into classSchedule (timeBegin, timeEnd, schoolName, month, activityDate) values ('"
-                + timeBegin + "', '" + timeEnd + "', '" + schoolName + "', '" + month + "', '" + activityDate + "');");
+    public void addBook(String timeBegin, String timeEnd, String schoolName, String activityDate) {
+        db.execSQL("insert into classSchedule (timeBegin, timeEnd, schoolName, activityDate) values ('"
+                + timeBegin + "', '" + timeEnd + "', '" + schoolName + "', '" + activityDate + "');");
     }
 
     public Cursor takeAllSchedules() {

@@ -1,7 +1,6 @@
 package com.example.bar;
 
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -21,8 +20,7 @@ public class LessonFragment extends Fragment {
     List<LessonList> lessonList = new ArrayList<>();
     public LessonFragment() {}
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         fragmentLessonBinding = FragmentLessonBinding.inflate(inflater, container, false);
         View view = fragmentLessonBinding.getRoot();
         LanguageVocabulary languageVocabulary = new LanguageVocabulary();
@@ -32,7 +30,6 @@ public class LessonFragment extends Fragment {
         choosedLang = ((MainActivity) getActivity()).value;
         fragmentLessonBinding.listView.setOnItemClickListener((parent, view1, position, id) -> {
             ((MainActivity) getActivity()).setFragment(new LessonSelectFragment());
-
             Bundle bundle = new Bundle();
             bundle.putString("monday", String.valueOf(convertToUnixTimestamp(lessonList.get(position).data1)));
             bundle.putString("friday", String.valueOf(convertToUnixTimestamp(lessonList.get(position).data2)));
@@ -44,11 +41,10 @@ public class LessonFragment extends Fragment {
         ((MainActivity) getActivity()).setActionBar(languageVocabulary.actionBarTitle[1], R.drawable.baseline_calendar_month_24);
         return view;
     }
-
     void printDays() {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
-        for (int week = 1; week <= 27; week++) {
+        for (int week = 1; week <= 52; week++) {
             calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
             String formattedDateMonday = dateFormat.format(calendar.getTime());
@@ -58,7 +54,6 @@ public class LessonFragment extends Fragment {
             calendar.add(Calendar.WEEK_OF_YEAR, 1);
         }
     }
-
     private long convertToUnixTimestamp(String dateStr) {
         try {
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());

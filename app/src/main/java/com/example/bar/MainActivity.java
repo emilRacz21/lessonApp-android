@@ -40,11 +40,9 @@ public class MainActivity extends AppCompatActivity {
         | ActionBar.DISPLAY_SHOW_HOME
         | ActionBar.DISPLAY_SHOW_CUSTOM
         | ActionBar.DISPLAY_USE_LOGO);
-
         setBottomMenu();
 
         activityMainBinding.bottomNavigationView.setOnItemSelectedListener(item -> {
-
             if(item.getItemId() == R.id.lessons){
                 setFragment(new LessonFragment());
             }
@@ -96,9 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
     void setActionBar(String title, int logo){
         SpannableString spannableString = new SpannableString(title);
-
         spannableString.setSpan(new RelativeSizeSpan(1.2f), 0, spannableString.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-
         getSupportActionBar().setTitle(spannableString);
         getSupportActionBar().setLogo(logo);
     }

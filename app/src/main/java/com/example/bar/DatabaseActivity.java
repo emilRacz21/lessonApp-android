@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.EditText;
+
 import org.jetbrains.annotations.NotNull;
 
 public class DatabaseActivity extends SQLiteOpenHelper {
@@ -49,5 +51,10 @@ public class DatabaseActivity extends SQLiteOpenHelper {
 
     public void updateDB(String id) {
         db.execSQL("update mylibrary set profileLogin = 'aktualizacja' where id = '" + id + "';");
+    }
+
+    public void addBookArray( EditText[] editTexts) {
+        db.execSQL("insert into mylibrary (profileLogin, profileName, profileForname, profilePhone, profileExtraInfo, profilePassword, profileRePassword) values ('"
+                + editTexts[0].getText().toString() + "', '" + editTexts[1].getText().toString() + "', '" + editTexts[2].getText().toString() + "', '" + editTexts[3].getText().toString() + "', '" + editTexts[4].getText().toString() + "', '" + editTexts[5].getText().toString() + "', '" + editTexts[6].getText().toString() + "');");
     }
 }

@@ -13,6 +13,8 @@ public class LanguageVocabulary {
     String[] toastMessage = new String[2];
     String[] database = new String[2];
     String[] dialog = new String[4];
+    String[] seasons = new String[12];
+    String[] daysOfWeek = new String[5];
     int[] flag = {R.drawable.flag_poland, R.drawable.flag_germany, R.drawable.flag_united_kingdom, R.drawable.flag_france, R.drawable.flag_russia, R.drawable.flag_spain};
     void setPolish(){
         spinnerChoose = new String[]{"Wybierz grupę","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -20,12 +22,14 @@ public class LanguageVocabulary {
         home = new String[]{" DZISIEJSZE ZAJĘCIA ", "POPRZEDNI", "NASTĘPNY","Brak zajęć w podanym terminie", "ZOBACZ WSZYTSKIE ZAJĘCIA"};
         options = new String[]{"Wybierz opcje", " Wybierz język "};
         actionBarTitle = new String[]{" Strona główna ", " Zajęcia ", " Oceny ", " Edytuj profil ", " Zmień język ", " Więcej "};
-        editProfileLang = new String[]{"Ogólne informacje","Twój login", "Imię", "Nazwisko", "Telefon", "Dodatkowe informacje", "Hasło", "Powtórz hasło", "ZASTOSUJ", "USUŃ"};
+        editProfileLang = new String[]{"Twój profil","Twój login", "Imię", "Nazwisko", "Telefon", "Dodatkowe informacje", "Hasło", "Powtórz hasło", "ZASTOSUJ", "USUŃ"};
         menu = new String[]{"Edytuj profil", "Zmień język", "Wyloguj się"};
         menuBottom = new String[]{"Zajęcia", "Oceny", "Więcej","Lista realizacji zajęć", "Brak elementów do wyświetlenia"};
         toastMessage = new String[]{"Uzupełnij wszystkie pola!", "Podaj takie same hasła!"};
         database = new String[]{"Login", "Imię", "Nazwisko", "Telefon", "Informacje", "Hasło", "Powtórzone hasło"};
         dialog = new String[]{"Uwaga","Czy jesteś pewny?","Tak","Nie"};
+        seasons = new String[]{"STYCZEŃ", "LUTY", "MARZEC", "KWIECIEŃ", "MAJ", "CZERWIEC", "LIPIEC", "SIERPIEŃ", "WRZESIEŃ", "PAŹDZIERNIK", "LISTOPAD", "GRUDZIEŃ"};
+        daysOfWeek = new String[] {"PON", "WTO", "ŚRO", "CZW", "PT"};
     }
     void setEnglish(){
         spinnerChoose = new String[]{"Select group","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -33,12 +37,14 @@ public class LanguageVocabulary {
         home = new String[]{"TODAY'S CLASSES", "PREVIOUS", "NEXT", "No classes in the given term", "SEE ALL CLASSES"};
         options = new String[]{" Choose options ", " Choose language "};
         actionBarTitle = new String[]{" Home ", " Lesson ", " Grades ", " change profile ", " change language ", " More options "};
-        editProfileLang = new String[]{"General Information", "Your Username", "First Name", "Last Name", "Phone", "Additional Information", "Password", "Repeat Password", "APPLY", "DELETE"};
+        editProfileLang = new String[]{"Your profile", "Your Username", "First Name", "Last Name", "Phone", "Additional Information", "Password", "Repeat Password", "APPLY", "DELETE"};
         menu = new String[]{"Edit Profile", "Change Language", "Log Out"};
         menuBottom = new String[]{"Classes", "Grades", "More", "List of Classes Achievements", "No items to display"};
         toastMessage = new String[]{"Fill in all fields!", "Enter the same passwords!"};
         database = new String[]{"Login", "First Name", "Last Name", "Phone", "Information", "Password", "Repeated Password"};
         dialog = new String[]{"Warning","Are you sure?","Yes","No"};
+        seasons = new String[]{"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
+        daysOfWeek = new String[] {"MON", "TUE", "WED", "THU", "FRI"};
     }
     void setGerman(){
         spinnerChoose = new String[]{"Gruppe auswählen","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -52,6 +58,8 @@ public class LanguageVocabulary {
         toastMessage = new String[]{"Füllen Sie alle Felder aus!", "Geben Sie dieselben Passwörter ein!"};
         database = new String[]{"Login", "Vorname", "Nachname", "Telefon", "Informationen", "Passwort", "Wiederholtes Passwort"};
         dialog = new String[]{"Achtung","Bist du sicher?","Ja","Nein"};
+        seasons = new String[]{"JANUAR", "FEBRUAR", "MÄRZ", "APRIL", "MAI", "JUNI", "JULI", "AUGUST", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DEZEMBER"};
+        daysOfWeek = new String[] {"MO", "DI", "MI", "DO", "FR"};
     }
     void setFrench(){
         spinnerChoose = new String[]{"Choisissez un groupe", "1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -59,13 +67,15 @@ public class LanguageVocabulary {
         home = new String[]{" COURS D'AUJOURD'HUI ", "PRÉCÉDENT", "SUIVANT", "Aucun cours à la date spécifiée", "VOIR TOUS LES COURS"};
         options = new String[]{"Choisissez une option", " Choisissez une langue "};
         actionBarTitle = new String[]{" Page d'accueil ", " Cours ", " Notes ", " Modifier le profil ", " Changer de langue ", " Plus "};
-        editProfileLang = new String[]{"Informations générales", "Votre nom d'utilisateur", "Prénom", "Nom de famille", "Téléphone", "Informations supplémentaires", "Mot de passe", "Répéter le mot de passe", "APPLIQUER", "ANNULER"};
+        editProfileLang = new String[]{"Informations", "Votre nom d'utilisateur", "Prénom", "Nom de famille", "Téléphone", "Informations supplémentaires", "Mot de passe", "Répéter le mot de passe", "APPLIQUER", "ANNULER"};
         menu = new String[]{"Modifier le profil", "Changer de langue", "Déconnexion"};
         menuBottom = new String[]{"Cours", "Notes", "Plus", "Liste des cours terminés", "Aucun élément à afficher"};
         toastMessage = new String[]{"Remplissez tous les champs !", "Entrez les mêmes mots de passe !"};
         database = new String[]{"Titre", "Auteur"};
         database = new String[]{"Login", "Prénom", "Nom de famille", "Téléphone", "Informations", "Mot de passe", "Mot de passe répété"};
         dialog = new String[]{"Attention", "Êtes-vous sûr ?", "Oui", "Non"};
+        seasons = new String[]{ "JANVIER", "FÉVRIER", "MARS", "AVRIL", "MAI", "JUIN", "JUILLET", "AOÛT", "SEPTEMBRE", "OCTOBRE", "NOVEMBRE", "DÉCEMBRE"};
+        daysOfWeek = new String[] {"LUN", "MAR", "MER", "JEU", "VEN"};
     }
     void setRussian(){
         spinnerChoose = new String[]{"Выберите группу","1А", "1Б", "1В", "1Г", "2А", "2Б", "2В", "2Г", "3А", "3Б", "3В", "3Г"};
@@ -73,13 +83,15 @@ public class LanguageVocabulary {
         home = new String[]{" ЗАНЯТИЯ СЕГОДНЯ ", "ПРЕДЫДУЩИЕ", "СЛЕДУЮЩИЕ","Нет занятий на указанную дату", "ПОСМОТРЕТЬ ВСЕ ЗАНЯТИЯ"};
         options = new String[]{"Выберите опцию", " Выберите язык "};
         actionBarTitle = new String[]{" Главная страница ", " Занятия ", " Оценки ", " Редактировать профиль ", " Изменить язык ", " Еще "};
-        editProfileLang = new String[]{"Общая информация","Ваш логин", "Имя", "Фамилия", "Телефон", "Дополнительная информация", "Пароль", "Повторите пароль", "ПРИМЕНИТЬ", "ОТМЕНА"};
+        editProfileLang = new String[]{"информация","Ваш логин", "Имя", "Фамилия", "Телефон", "Дополнительная информация", "Пароль", "Повторите пароль", "ПРИМЕНИТЬ", "ОТМЕНА"};
         menu = new String[]{"Редактировать профиль", "Изменить язык", "Выйти"};
         menuBottom = new String[]{"Занятия", "Оценки", "Ещё", "Список занятий", "Нет элементов для отображения"};
         toastMessage = new String[]{"Заполните все поля!", "Введите одинаковые пароли!"};
         database = new String[]{"Заголовок", "Автор"};
         database = new String[]{"Логин", "Имя", "Фамилия", "Телефон", "Информация", "Пароль", "Повторите пароль"};
         dialog = new String[]{"Предупреждение", "Вы уверены?", "Да", "Нет"};
+        seasons = new String[]{"ЯНВАРЬ", "ФЕВРАЛЬ", "МАРТ", "АПРЕЛЬ", "МАЙ", "ИЮНЬ", "ИЮЛЬ", "АВГУСТ", "СЕНТЯБРЬ", "ОКТЯБРЬ", "НОЯБРЬ", "ДЕКАБРЬ"};
+        daysOfWeek = new String[] {"ПН", "ВТ", "СР", "ЧТ", "ПТ"};
     }
 
     void setSpain(){
@@ -88,12 +100,13 @@ public class LanguageVocabulary {
         home = new String[]{" CLASES DE HOY ", "ANTERIOR", "SIGUIENTE", "Sin clases en el horario especificado", "VER TODAS LAS CLASES"};
         options = new String[]{"Selecciona una opción", " Selecciona un idioma "};
         actionBarTitle = new String[]{" Página principal ", " Clases ", " Calificaciones ", " Editar perfil ", " Cambiar idioma ", " Más "};
-        editProfileLang = new String[]{"Información general", "Tu nombre de usuario", "Nombre", "Apellido", "Teléfono", "Información adicional", "Contraseña", "Repetir contraseña", "APLICAR", "CANCELAR"};
+        editProfileLang = new String[]{"Información", "Tu nombre de usuario", "Nombre", "Apellido", "Teléfono", "Información adicional", "Contraseña", "Repetir contraseña", "APLICAR", "CANCELAR"};
         menu = new String[]{"Editar perfil", "Cambiar idioma", "Cerrar sesión"};
         menuBottom = new String[]{"Clases", "Calificaciones", "Más", "Lista de clases completadas", "No hay elementos para mostrar"};
         toastMessage = new String[]{"¡Complete todos los campos!", "¡Ingrese las mismas contraseñas!"};
         database = new String[]{"Login", "Nombre", "Apellido", "Teléfono", "Información", "Contraseña", "Repetir Contraseña"};
         dialog = new String[]{"Advertencia", "¿Estás seguro?", "Sí", "No"};
-
+        seasons = new String[]{"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"};
+        daysOfWeek = new String[] {"LUN", "MAR", "MIÉ", "JUE", "VIE"};
     }
 }

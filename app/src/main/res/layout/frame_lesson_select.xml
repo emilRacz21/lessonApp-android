@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:rowCount="2"
-    android:columnCount="2">
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
         <LinearLayout
             android:layout_marginEnd="12sp"
             android:layout_marginStart="12sp"
@@ -13,6 +13,7 @@
             android:orientation="vertical"
             android:layout_height="wrap_content">
                 <TextView
+                    android:text="@string/pon"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textAlignment="center"
@@ -21,6 +22,7 @@
                     android:layout_width="60sp"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:text="@string/_12"
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textSize="24sp"
@@ -32,9 +34,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_weight="1"
             android:id="@+id/layoutDetails"
-            android:layout_width="390sp"
-            android:layout_height="220sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="13sp"
             android:background="@drawable/radius_lesson"
             android:orientation="vertical"
@@ -45,14 +48,32 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20sp"
                     android:layout_marginTop="30sp"
-                    android:columnCount="3"
+                    android:columnCount="5"
                     android:rowCount="1">
 
                         <TextView
+                            android:id="@+id/timeBegin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5sp"
+                            android:text="@string/_10_00"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5sp"
+                            android:text="@string/a"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/timeEnd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="17sp"
-                            android:text="@string/_10_00_10_30"
+                            android:text="@string/_10_30"
                             android:textColor="@color/black"
                             android:textSize="22sp"
                             android:textStyle="bold" />
@@ -65,6 +86,7 @@
                             tools:ignore="ImageContrastCheck" />
 
                         <TextView
+                            android:id="@+id/timeResult"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/_30"
@@ -90,13 +112,13 @@
                             tools:ignore="ImageContrastCheck" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/schoolText"
+                            android:layout_width="218sp"
+                            android:layout_height="match_parent"
                             android:layout_marginStart="12sp"
-                            android:text="@string/przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka"
+                            android:text="@string/akademia_zamosjska_wydzia_logistyki"
                             android:textColor="@color/colorGray"
-                            android:textSize="18sp"
-                            tools:ignore="TextContrastCheck" />
+                            android:textSize="18sp" />
 
                         <ImageView
                             android:layout_width="30sp"
@@ -109,6 +131,7 @@
                 </GridLayout>
 
                 <LinearLayout
+                    android:layout_marginBottom="27sp"
                     android:layout_width="150sp"
                     android:layout_height="40sp"
                     android:layout_marginStart="20sp"
@@ -134,4 +157,4 @@
 
                 </LinearLayout>
         </LinearLayout>
-</GridLayout>
+</LinearLayout>

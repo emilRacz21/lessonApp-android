@@ -37,10 +37,12 @@ public class CustomLanguageAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.custom_grid_layout, parent, false);
         }
+
         TextView lang1 = convertView.findViewById(R.id.langName);
         lang1.setText(lang[position]);
         ImageView langImg = convertView.findViewById(R.id.langImg);
         langImg.setBackgroundResource(flag[position]);
+
         return convertView;
     }
 }

@@ -9,13 +9,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 import com.example.bar.databinding.FragmentEditProfileBinding;
 
 public class EditProfileFragment extends Fragment {
-    FragmentEditProfileBinding fragmentEditProfileBinding;
+    FragmentEditProfileBinding profileBinding;
     LanguageVocabulary languageVocabulary = new LanguageVocabulary();
     int choosedLang;
+    EditText[] editTexts;
     public EditProfileFragment() {}
 
     @Override
@@ -26,35 +28,49 @@ public class EditProfileFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        fragmentEditProfileBinding = FragmentEditProfileBinding.inflate(inflater, container, false);
-        View view = fragmentEditProfileBinding.getRoot();
+        profileBinding = FragmentEditProfileBinding.inflate(inflater, container, false);
+        View view = profileBinding.getRoot();
         choosedLang = ((MainActivity)getActivity()).value;
         DatabaseActivity databaseActivity = new DatabaseActivity(getContext());
         ((MainActivity)getActivity()).setLanguage(choosedLang, languageVocabulary);
         setHintText();
-        fragmentEditProfileBinding.buttonCancel.setOnClickListener(view1-> deleteDB(databaseActivity));
-        fragmentEditProfileBinding.buttonAccept.setOnClickListener(view1 -> addDB(databaseActivity));
-        fragmentEditProfileBinding.backArrow.setOnClickListener(view1 -> ((MainActivity)getActivity()).setFragment(new MoreFragment()));
+        profileBinding.buttonCancel.setOnClickListener(view1-> deleteDB(databaseActivity));
+        profileBinding.buttonAccept.setOnClickListener(view1 -> addDB(databaseActivity));
+        profileBinding.backArrow.setOnClickListener(view1 -> ((MainActivity)getActivity()).setFragment(new MoreFragment()));
         updateList(databaseActivity);
         return view;
     }
     void setHintText(){
         ((MainActivity)getActivity()).setActionBar(languageVocabulary.actionBarTitle[3], R.drawable.baseline_person_24);
-        fragmentEditProfileBinding.informationText.setText(languageVocabulary.editProfileLang[0]);
-        fragmentEditProfileBinding.editTextText.setHint(languageVocabulary.editProfileLang[1]);
-        fragmentEditProfileBinding.editTextText1.setHint(languageVocabulary.editProfileLang[2]);
-        fragmentEditProfileBinding.editTextText2.setHint(languageVocabulary.editProfileLang[3]);
-        fragmentEditProfileBinding.editTextText3.setHint(languageVocabulary.editProfileLang[4]);
-        fragmentEditProfileBinding.editTextText4.setHint(languageVocabulary.editProfileLang[5]);
-        fragmentEditProfileBinding.editTextText5.setHint(languageVocabulary.editProfileLang[6]);
-        fragmentEditProfileBinding.editTextText6.setHint(languageVocabulary.editProfileLang[7]);
-        fragmentEditProfileBinding.buttonAccept.setText(languageVocabulary.editProfileLang[8]);
-        fragmentEditProfileBinding.buttonCancel.setText(languageVocabulary.editProfileLang[9]);
+        profileBinding.informationText.setText(languageVocabulary.editProfileLang[0]);
+        String[] hints = {
+                languageVocabulary.editProfileLang[1],
+                languageVocabulary.editProfileLang[2],
+                languageVocabulary.editProfileLang[3],
+                languageVocabulary.editProfileLang[4],
+                languageVocabulary.editProfileLang[5],
+                languageVocabulary.editProfileLang[6],
+                languageVocabulary.editProfileLang[7]
+        };
+        editTexts= new EditText[]{
+                profileBinding.editTextText,
+                profileBinding.editTextText1,
+                profileBinding.editTextText2,
+                profileBinding.editTextText3,
+                profileBinding.editTextText4,
+                profileBinding.editTextText5,
+                profileBinding.editTextText6,
+        };
+        for (int i = 0; i < editTexts.length ; i++){
+            editTexts[i].setHint(hints[i]);
+        }
+        profileBinding.buttonAccept.setText(languageVocabulary.editProfileLang[8]);
+        profileBinding.buttonCancel.setText(languageVocabulary.editProfileLang[9]);
     }
 
     void addDB(DatabaseActivity databaseActivity){
-        if(!(fragmentEditProfileBinding.editTextText5.getText().toString().isEmpty() || fragmentEditProfileBinding.editTextText6.getText().toString().isEmpty())){
-            if(fragmentEditProfileBinding.editTextText5.getText().toString().equals(fragmentEditProfileBinding.editTextText6.getText().toString())){
+        if(!(profileBinding.editTextText5.getText().toString().isEmpty() || profileBinding.editTextText6.getText().toString().isEmpty())){
+            if(profileBinding.editTextText5.getText().toString().equals(profileBinding.editTextText6.getText().toString())){
                 makeDialog(databaseActivity);
             }else{
                 Toast.makeText(getContext(), languageVocabulary.toastMessage[1],Toast.LENGTH_SHORT).show();
@@ -79,15 +95,7 @@ public class EditProfileFragment extends Fragment {
                 .setCancelable(false)
                 .setIcon(R.drawable.baseline_warning_24)
                 .setPositiveButton(languageVocabulary.dialog[2],(dialog, which) -> {
-                    databaseActivity.addBook(
-                            fragmentEditProfileBinding.editTextText.getText().toString(),
-                            fragmentEditProfileBinding.editTextText1.getText().toString(),
-                            fragmentEditProfileBinding.editTextText2.getText().toString(),
-                            fragmentEditProfileBinding.editTextText3.getText().toString(),
-                            fragmentEditProfileBinding.editTextText4.getText().toString(),
-                            fragmentEditProfileBinding.editTextText5.getText().toString(),
-                            fragmentEditProfileBinding.editTextText6.getText().toString()
-                    );
+                    databaseActivity.addBookArray(editTexts);
                     updateList(databaseActivity);
                     dialog.dismiss();
                 })
@@ -104,6 +112,6 @@ public class EditProfileFragment extends Fragment {
             }
             builder.append("\n---------------------------\n");
         }
-        fragmentEditProfileBinding.dbResult.setText(builder.toString());
+        profileBinding.dbResult.setText(builder.toString());
     }
 }

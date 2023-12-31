@@ -31,7 +31,7 @@
     <string name="usu">USUŃ</string>
     <string name="_10_00_10_30">10:00 - 10:30</string>
     <string name="_30">30</string>
-    <string name="przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka">Przedszkole samorządowe nr 1 \n Im. Jana Nowaka</string>
+    <string name="przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka">Przedszkole samorządowe nr 1 Im. Jana Nowaka</string>
     <string name="obecno">Obecność</string>
     <string name="lista_realizacji_zaj">Lista realizacji zajęć</string>
     <string name="brak_element_w_do_wy_wietlenia">Brak elementów do wyświetlenia</string>
@@ -41,4 +41,11 @@
     <string name="wi_cej">Więcej</string>
     <string name="wybierz_j_zyk">Wybierz język</string>
     <string name="_17_09_2023_23_09_2023">17.09.2023 - 23.09.2023</string>
+    <string name="brak_danych_do_wy_wietlenia">Brak danych do wyświetlenia!</string>
+    <string name="pon">PON</string>
+    <string name="_12">12</string>
+    <string name="_10_00">10:00</string>
+    <string name="a">-</string>
+    <string name="_10_30">10:30</string>
+    <string name="akademia_zamosjska_wydzia_logistyki">Akademia zamosjska | Wydział Logistyki</string>
 </resources>

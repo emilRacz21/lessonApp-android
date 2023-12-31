@@ -46,15 +46,19 @@
         </GridLayout>
 
         <GridView
+            android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="27sp"
             android:id="@+id/gridView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="25sp"
+            android:layout_marginEnd="25sp"
             android:layout_marginTop="22sp"
+            android:layout_marginBottom="27sp"
             android:numColumns="2"
-            android:verticalSpacing="20dp"/>
+            android:horizontalSpacing="22sp"
+            android:verticalSpacing="22dp"
+            android:gravity="center"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

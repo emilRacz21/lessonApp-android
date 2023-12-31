@@ -20,6 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <GridLayout
+            android:layout_marginBottom="22sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:rowCount="2"
@@ -38,7 +39,8 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14sp"
+                android:paddingStart="16sp"
+                android:paddingEnd="26sp"
                 android:textSize="33sp"
                 android:textStyle="bold"
                 android:text="@string/wybierz_j_zyk"
@@ -52,13 +54,12 @@
             android:id="@+id/gridView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25sp"
-            android:layout_marginEnd="25sp"
-            android:layout_marginTop="22sp"
-            android:layout_marginBottom="27sp"
+            android:layout_marginStart="6sp"
+            android:layout_marginEnd="6sp"
+            android:layout_marginBottom="14sp"
             android:numColumns="2"
-            android:horizontalSpacing="22sp"
-            android:verticalSpacing="22dp"
+            android:horizontalSpacing="2sp"
+            android:verticalSpacing="15dp"
             android:gravity="center"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

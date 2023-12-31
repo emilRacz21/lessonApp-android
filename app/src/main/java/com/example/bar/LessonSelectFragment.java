@@ -27,7 +27,6 @@ public class LessonSelectFragment extends Fragment {
     String timeBegin;
     String timeEnd;
     String school;
-    String month;
     String activityDate;
     boolean frameAdded = false;
     int choosedLang;
@@ -59,8 +58,6 @@ public class LessonSelectFragment extends Fragment {
         getParentFragmentManager().setFragmentResultListener("lessons", this, (requestKey, result) -> {
             monday = result.getString("monday");
             Cursor cursor = db.takeAllSchedules();
-            String singleMonth = formatDate(monday, 0, "MMMM").toUpperCase();
-            System.out.println(singleMonth);
             //petla while z wszytskimi elelemntami znajdujacymi się w DB.
             while (cursor.moveToNext()) {
                 frameBinding = FrameLessonSelectBinding.inflate(getLayoutInflater());
@@ -68,7 +65,7 @@ public class LessonSelectFragment extends Fragment {
                 singleFrame.setId(increment);
                 //odwołanie do metody cursor, ustawia na stringi dane z DB.
                 getCursor(cursor);
-                if (singleMonth.equals(month) && formatDate(monday, getDayNumber(profileLogin), "dd.MM.yyyy").equals(activityDate)) {
+                if (formatDate(monday, getDayNumber(profileLogin), "dd.MM.yyyy").equals(activityDate)) {
                     fragmentLessonSelectBinding.hideRelativeLayout.setVisibility(View.GONE);
                     //binding na elementy znajdujące sie w frame_lesson_select.xml
                     frameBinding.daysMonth.setText(profileLogin);
@@ -110,7 +107,6 @@ public class LessonSelectFragment extends Fragment {
         timeBegin = cursor.getString(cursor.getColumnIndex("timeBegin"));
         timeEnd = cursor.getString(cursor.getColumnIndex("timeEnd"));
         school = cursor.getString(cursor.getColumnIndex("schoolName"));
-        month = cursor.getString(cursor.getColumnIndex("month"));
         activityDate = cursor.getString(cursor.getColumnIndex("activityDate"));
         profileLogin = getDayOfWeekFromActivityDate(activityDate);
     }

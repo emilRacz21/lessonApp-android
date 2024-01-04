@@ -15,6 +15,7 @@ public class LanguageVocabulary {
     String[] dialog = new String[4];
     String[] seasons = new String[12];
     String[] daysOfWeek = new String[5];
+    String[] formData = new String[6];
     int[] flag = {R.drawable.flag_poland, R.drawable.flag_germany, R.drawable.flag_united_kingdom, R.drawable.flag_france, R.drawable.flag_russia, R.drawable.flag_spain};
     void setPolish(){
         spinnerChoose = new String[]{"Wybierz grupę","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -30,6 +31,7 @@ public class LanguageVocabulary {
         dialog = new String[]{"Uwaga","Czy jesteś pewny?","Tak","Nie"};
         seasons = new String[]{"STYCZEŃ", "LUTY", "MARZEC", "KWIECIEŃ", "MAJ", "CZERWIEC", "LIPIEC", "SIERPIEŃ", "WRZESIEŃ", "PAŹDZIERNIK", "LISTOPAD", "GRUDZIEŃ"};
         daysOfWeek = new String[] {"PON", "WTO", "ŚRO", "CZW", "PT"};
+        formData = new String[]{"DODAJ ZAJĘCIA", "Wpisz nazwę szkoły", "Godzina rozpoczęcia zajęć", "Godzina zakończenia zajęć", "AKCEPTUJ", "ANULUJ"};
     }
     void setEnglish(){
         spinnerChoose = new String[]{"Select group","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -45,6 +47,7 @@ public class LanguageVocabulary {
         dialog = new String[]{"Warning","Are you sure?","Yes","No"};
         seasons = new String[]{"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
         daysOfWeek = new String[] {"MON", "TUE", "WED", "THU", "FRI"};
+        formData = new String[]{"ADD CLASSES", "Enter school name", "Class start time", "Class end time", "ACCEPT", "CANCEL"};
     }
     void setGerman(){
         spinnerChoose = new String[]{"Gruppe auswählen","1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -60,6 +63,7 @@ public class LanguageVocabulary {
         dialog = new String[]{"Achtung","Bist du sicher?","Ja","Nein"};
         seasons = new String[]{"JANUAR", "FEBRUAR", "MÄRZ", "APRIL", "MAI", "JUNI", "JULI", "AUGUST", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DEZEMBER"};
         daysOfWeek = new String[] {"MO", "DI", "MI", "DO", "FR"};
+        formData = new String[]{"UNTERRICHT HINZUFÜGEN", "Schulname eingeben", "Unterrichtsbeginnzeit", "Unterrichtsendzeit", "AKZEPTIEREN", "ABBRECHEN"};
     }
     void setFrench(){
         spinnerChoose = new String[]{"Choisissez un groupe", "1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D"};
@@ -76,6 +80,7 @@ public class LanguageVocabulary {
         dialog = new String[]{"Attention", "Êtes-vous sûr ?", "Oui", "Non"};
         seasons = new String[]{ "JANVIER", "FÉVRIER", "MARS", "AVRIL", "MAI", "JUIN", "JUILLET", "AOÛT", "SEPTEMBRE", "OCTOBRE", "NOVEMBRE", "DÉCEMBRE"};
         daysOfWeek = new String[] {"LUN", "MAR", "MER", "JEU", "VEN"};
+        formData = new String[]{"AJOUTER DES COURS", "Entrez le nom de l'école", "Heure de début des cours", "Heure de fin des cours", "ACCEPTER", "ANNULER"};
     }
     void setRussian(){
         spinnerChoose = new String[]{"Выберите группу","1А", "1Б", "1В", "1Г", "2А", "2Б", "2В", "2Г", "3А", "3Б", "3В", "3Г"};
@@ -92,6 +97,7 @@ public class LanguageVocabulary {
         dialog = new String[]{"Предупреждение", "Вы уверены?", "Да", "Нет"};
         seasons = new String[]{"ЯНВАРЬ", "ФЕВРАЛЬ", "МАРТ", "АПРЕЛЬ", "МАЙ", "ИЮНЬ", "ИЮЛЬ", "АВГУСТ", "СЕНТЯБРЬ", "ОКТЯБРЬ", "НОЯБРЬ", "ДЕКАБРЬ"};
         daysOfWeek = new String[] {"ПН", "ВТ", "СР", "ЧТ", "ПТ"};
+        formData = new String[]{"ДОБАВИТЬ ЗАНЯТИЯ", "Введите название школы", "Время начала занятий", "Время окончания занятий", "ПРИНЯТЬ", "ОТМЕНА"};
     }
 
     void setSpain(){
@@ -108,5 +114,6 @@ public class LanguageVocabulary {
         dialog = new String[]{"Advertencia", "¿Estás seguro?", "Sí", "No"};
         seasons = new String[]{"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"};
         daysOfWeek = new String[] {"LUN", "MAR", "MIÉ", "JUE", "VIE"};
+        formData = new String[]{"AGREGAR CLASES", "Ingrese el nombre de la escuela", "Hora de inicio de clases", "Hora de finalización de clases", "ACEPTAR", "CANCELAR"};
     }
 }

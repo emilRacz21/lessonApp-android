@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/addSchedule"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="1"
+        android:icon="@drawable/baseline_post_add_24"
+        android:title="@string/todo" />
 
     <item
         android:id="@+id/profile"
@@ -18,8 +24,7 @@
     <item
         android:id="@+id/logout"
         app:showAsAction="never"
-        android:orderInCategory="140"
+        android:orderInCategory="141"
         android:title="@string/wyloguj_si"
         android:icon="@drawable/baseline_person_24" />
-
 </menu>

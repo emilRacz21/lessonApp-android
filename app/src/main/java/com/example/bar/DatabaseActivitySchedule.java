@@ -31,21 +31,11 @@ public class DatabaseActivitySchedule extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS classSchedule");
         onCreate(db);
     }
-
-    public void addBook(String timeBegin, String timeEnd, String schoolName, String activityDate) {
+    public void addSchedule(String timeBegin, String timeEnd, String schoolName, String activityDate) {
         db.execSQL("insert into classSchedule (timeBegin, timeEnd, schoolName, activityDate) values ('"
                 + timeBegin + "', '" + timeEnd + "', '" + schoolName + "', '" + activityDate + "');");
     }
-
     public Cursor takeAllSchedules() {
         return db.rawQuery("select * from classSchedule", null);
-    }
-
-    public void deleteAllBooks(String id) {
-        db.execSQL("delete from classSchedule where id = '" + id + "';");
-    }
-
-    public void updateDB(String id) {
-        db.execSQL("update classSchedule set profileLogin = 'aktualizacja' where id = '" + id + "';");
     }
 }

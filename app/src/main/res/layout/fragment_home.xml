@@ -67,11 +67,24 @@
             android:layout_height="wrap_content"
             android:text="@string/nast_pny"/>
     </GridLayout>
-
-    <LinearLayout
+    <ScrollView
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-
+        android:layout_marginTop="22sp"
+        android:layout_below="@+id/month_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginEnd="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/mtFrame"/>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/hideMyLayout"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -101,7 +114,5 @@
             android:layout_height="wrap_content"
             android:text="@string/zobacz_wszystkie_zajecia" />
     </LinearLayout>
-
-
 
 </RelativeLayout>

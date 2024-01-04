@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleForm"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="22sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dodaj zajęcia"/>
+        <EditText
+            android:id="@+id/editFormText"
+            android:layout_width="match_parent"
+            android:layout_height="62sp"
+            android:layout_marginStart="22sp"
+            android:layout_marginTop="22sp"
+            android:layout_marginEnd="22sp"
+            android:autofillHints="name"
+            android:background="@drawable/radius_profile"
+            android:ems="10"
+            android:hint="Wpisz nazwe szkoły"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editFormText1"
+            android:layout_width="match_parent"
+            android:layout_height="62sp"
+            android:layout_marginStart="22sp"
+            android:layout_marginTop="22sp"
+            android:layout_marginEnd="22sp"
+            android:autofillHints="name"
+            android:background="@drawable/radius_profile"
+            android:ems="10"
+            android:hint="Czas rozpoczęcia zajęć"
+            android:inputType="time"
+            android:paddingLeft="10dp"
+            android:textSize="18sp" />
+        <EditText
+            android:layout_marginBottom="22sp"
+            android:id="@+id/editFormText2"
+            android:layout_width="match_parent"
+            android:layout_height="62sp"
+            android:layout_marginStart="22sp"
+            android:layout_marginTop="22sp"
+            android:layout_marginEnd="22sp"
+            android:autofillHints="name"
+            android:background="@drawable/radius_profile"
+            android:ems="10"
+            android:hint="Czas zakończenia zajęć"
+            android:inputType="time"
+            android:paddingLeft="10dp"
+            android:textSize="18sp" />
+        <CalendarView
+            android:layout_gravity="center"
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginBottom="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_marginEnd="22sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/acceptBtnForm"
+                android:layout_width="120sp"
+                android:layout_height="50sp"
+                android:text="akceptuj"/>
+            <Button
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_width="120sp"
+                android:layout_height="50sp"
+                android:text="Anuluj"
+                android:id="@+id/cancelBtnForm"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

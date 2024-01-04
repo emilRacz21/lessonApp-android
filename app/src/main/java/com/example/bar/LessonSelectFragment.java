@@ -108,7 +108,7 @@ public class LessonSelectFragment extends Fragment {
         timeEnd = cursor.getString(cursor.getColumnIndex("timeEnd"));
         school = cursor.getString(cursor.getColumnIndex("schoolName"));
         activityDate = cursor.getString(cursor.getColumnIndex("activityDate"));
-        profileLogin = getDayOfWeekFromActivityDate(activityDate);
+        profileLogin = ((MainActivity)getActivity()).getDayOfWeekFromActivityDate(activityDate);
     }
     //Oblicznie ile trwają zajęcia.
     void timeResult(View singleFrame, String timeBegin, String timeEnd) {
@@ -143,40 +143,13 @@ public class LessonSelectFragment extends Fragment {
     //Zmień język i dodaj rok.
     void setLanguage() {
         String currentMonth = fragmentLessonSelectBinding.textMonth.getText().toString().toUpperCase();
-        int[] data = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-        for (int i = 0; i < data.length; i++) {
-            if (currentMonth.equals(String.valueOf(data[i]))) {
+        for (int i = 0, n = 1; i < 12; i++, n++) {
+            if (currentMonth.equals(String.valueOf(n))) {
                 int currentYear = Calendar.getInstance().get(Calendar.YEAR);
                 String monthWithYear = languageVocabulary.seasons[i] + " " + currentYear;
                 fragmentLessonSelectBinding.textMonth.setText(monthWithYear);
                 break;
             }
         }
-    }
-    //konwertowanie daty na skrót tygodnia.
-    private String getDayOfWeekFromActivityDate(String activityDate) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
-        try {
-            Date date = sdf.parse(activityDate);
-            SimpleDateFormat dayFormat = new SimpleDateFormat("EEE", Locale.getDefault());
-            String dayOfWeek = dayFormat.format(date);
-            switch (dayOfWeek) {
-                case "Mon":
-                    return languageVocabulary.daysOfWeek[0];
-                case "Tue":
-                    return languageVocabulary.daysOfWeek[1];
-                case "Wed":
-                    return languageVocabulary.daysOfWeek[2];
-                case "Thu":
-                    return languageVocabulary.daysOfWeek[3];
-                case "Fri":
-                    return languageVocabulary.daysOfWeek[4];
-                default:
-                    return "";
-            }
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return "";
     }
 }

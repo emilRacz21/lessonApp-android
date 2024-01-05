@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <string name="app_name">Zeitplan</string>
+        <string name="witam">willkommen</string>
+        <string name="poland">Polen</string>
+        <string name="zmie_j_zyk">Sprache ändern</string>
+        <string name="edytuj_profil">Profil bearbeiten</string>
+        <string name="wybierz_opcje">Optionen wählen</string>
+        <string name="strona_g_wna">Startseite</string>
+        <string name="usun_rekordy">Datensätze löschen</string>
+        <string name="akceptuj">akzeptieren</string>
+        <string name="wpisz_pierwszy_tekst">Geben Sie den ersten Text ein</string>
+        <string name="wpisz_drugi_tekst">Geben Sie den zweiten Text ein</string>
+        <string name="wynik">Ergebnis</string>
+        <string name="brak_zajec_w_podanym_zakresie">Keine Veranstaltungen im angegebenen Bereich</string>
+        <string name="nast_pny">NÄCHSTER</string>
+        <string name="poprzedni">VORHERIGER</string>
+        <string name="zobacz_wszystkie_zajecia">ALLE VERANSTALTUNGEN ANZEIGEN</string>
+        <string name="dzisiejsze_zaj_cia">HEUTIGE VERANSTALTUNGEN</string>
+        <string name="zastosuj">Anwenden</string>
+        <string name="anuluj">Abbrechen</string>
+        <string name="login">Anmeldung</string>
+        <string name="imie">Vorname</string>
+        <string name="powt_rz_has_o">Passwort wiederholen</string>
+        <string name="og_lne_informacje">All Informationen</string>
+        <string name="telefon">Telefon</string>
+        <string name="nazwisko">Nachname</string>
+        <string name="has_o">Passwort</string>
+        <string name="spinner">Spinner</string>
+        <string name="dodatkowe_informacje">Zusätzliche Info</string>
+        <string name="usu">LÖSCHEN</string>
+        <string name="_10_00_10_30">10:00 - 10:30</string>
+        <string name="_30">30</string>
+        <string name="przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka">Kommunaler Kindergarten Nr. 1 Im. Jana Nowaka</string>
+        <string name="obecno">Anwesenheit</string>
+        <string name="lista_realizacji_zaj">Durchgeführten staltungen</string>
+        <string name="brak_element_w_do_wy_wietlenia">Keine Elemente zum Anzeigen</string>
+        <string name="wyloguj_si">Abmelden</string>
+        <string name="oceny">Noten</string>
+        <string name="zaj_cia">Klassen</string>
+        <string name="wi_cej">Mehr</string>
+        <string name="wybierz_j_zyk">Sprache wählen</string>
+        <string name="_17_09_2023_23_09_2023">17.09.2023 - 23.09.2023</string>
+        <string name="brak_danych_do_wy_wietlenia">Keine Daten zum Anzeigen!</string>
+        <string name="pon">MO</string>
+        <string name="_12">12</string>
+        <string name="_10_00">10:00</string>
+        <string name="a">-</string>
+        <string name="_10_30">10:30</string>
+        <string name="akademia_zamosjska_wydzia_logistyki">Akademie Zamosjska | Fakultät für Logistik</string>
+        <string name="todo">TODO</string>
+        <string name="uzupenij_wszytskie_pola">Füllen Sie alle Felder aus!</string>
+        <string name="podaj_takie_same_hasła">Geben Sie dieselben Passwörter ein!</string>
+        <string name="uwaga">ACHTUNG</string>
+        <string name="czy_jestes_pewny">Bist du sicher?</string>
+        <string name="tak">JA</string>
+        <string name="nie">NEIN</string>
+        <string name="dodaj_zaj_cia">Unterricht hinzufügen</string>
+        <string name="wpisz_nazwe_szko_y">Schulnamen</string>
+        <string name="czas_rozpocz_cia_zaj">Beginn der Unterrichtszeit</string>
+        <string name="czas_zako_czenia_zaj">Ende der Unterrichtszeit</string>
+        <string name="zajecia_form">Der Veranstaltungen wurde abgebrochen!</string>
+        <string-array name="spinner">
+            <item>gruppe auswahlen</item>
+            <item>1A</item>
+            <item>2A</item>
+            <item>3D</item>
+            <item>2F</item>
+            <item>4H</item>
+            <item>2V</item>
+            <item>1G</item>
+            <item>6D</item>
+            <item>2A</item>
+        </string-array>
+        <string-array name="days">
+            <item>MO</item>
+            <item>DI</item>
+            <item>MI</item>
+            <item>DO</item>
+            <item>FR</item>
+        </string-array>
+        <string-array name="months">
+            <item>Januar</item>
+            <item>Februar</item>
+            <item>März</item>
+            <item>April</item>
+            <item>Mai</item>
+            <item>Juni</item>
+            <item>Juli</item>
+            <item>August</item>
+            <item>September</item>
+            <item>Oktober</item>
+            <item>November</item>
+            <item>Dezember</item>
+        </string-array>
+        <string-array name="database">
+            <item>Anmeldung</item>
+            <item>Vorname</item>
+            <item>Nachname</item>
+            <item>Telefon</item>
+            <item>Informationen</item>
+            <item>Passwort</item>
+            <item>Passwort wiederholen</item>
+        </string-array>
+        <string-array name="languageChoose">
+            <item>Polnisch</item>
+            <item>Deutsch</item>
+            <item>Englisch</item>
+            <item>Französisch</item>
+            <item>Russisch</item>
+            <item>Spanisch</item>
+        </string-array>
+</resources>

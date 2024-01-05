@@ -20,7 +20,7 @@
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dodaj zajęcia"/>
+            android:text="@string/dodaj_zaj_cia"/>
         <EditText
             android:id="@+id/editFormText"
             android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             android:autofillHints="name"
             android:background="@drawable/radius_profile"
             android:ems="10"
-            android:hint="Wpisz nazwe szkoły"
+            android:hint="@string/wpisz_nazwe_szko_y"
             android:inputType="text"
             android:paddingLeft="10dp"
             android:textSize="18sp" />
@@ -46,7 +46,7 @@
             android:autofillHints="name"
             android:background="@drawable/radius_profile"
             android:ems="10"
-            android:hint="Czas rozpoczęcia zajęć"
+            android:hint="@string/czas_rozpocz_cia_zaj"
             android:inputType="time"
             android:paddingLeft="10dp"
             android:textSize="18sp" />
@@ -61,7 +61,7 @@
             android:autofillHints="name"
             android:background="@drawable/radius_profile"
             android:ems="10"
-            android:hint="Czas zakończenia zajęć"
+            android:hint="@string/czas_zako_czenia_zaj"
             android:inputType="time"
             android:paddingLeft="10dp"
             android:textSize="18sp" />
@@ -84,13 +84,13 @@
                 android:id="@+id/acceptBtnForm"
                 android:layout_width="120sp"
                 android:layout_height="50sp"
-                android:text="akceptuj"/>
+                android:text="@string/akceptuj"/>
             <Button
                 android:textColor="@color/white"
                 android:backgroundTint="@color/colorPrimary"
                 android:layout_width="120sp"
                 android:layout_height="50sp"
-                android:text="Anuluj"
+                android:text="@string/anuluj"
                 android:id="@+id/cancelBtnForm"/>
         </LinearLayout>
     </LinearLayout>

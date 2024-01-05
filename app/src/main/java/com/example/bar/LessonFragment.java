@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class LessonFragment extends Fragment {
-    int choosedLang;
+
     FragmentLessonBinding fragmentLessonBinding;
     List<LessonList> lessonList = new ArrayList<>();
     public LessonFragment() {}
@@ -23,11 +23,9 @@ public class LessonFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         fragmentLessonBinding = FragmentLessonBinding.inflate(inflater, container, false);
         View view = fragmentLessonBinding.getRoot();
-        LanguageVocabulary languageVocabulary = new LanguageVocabulary();
         printDays();
         CustomLessonAdapter customLessonAdapter = new CustomLessonAdapter(lessonList, getContext());
         fragmentLessonBinding.listView.setAdapter(customLessonAdapter);
-        choosedLang = ((MainActivity) getActivity()).value;
         fragmentLessonBinding.listView.setOnItemClickListener((parent, view1, position, id) -> {
             ((MainActivity) getActivity()).setFragment(new LessonSelectFragment());
             Bundle bundle = new Bundle();
@@ -36,9 +34,8 @@ public class LessonFragment extends Fragment {
             getParentFragmentManager().setFragmentResult("lessons", bundle);
 
         });
-        ((MainActivity) getActivity()).setLanguage(choosedLang, languageVocabulary);
-        fragmentLessonBinding.implementLessons.setText(languageVocabulary.menuBottom[3]);
-        ((MainActivity) getActivity()).setActionBar(languageVocabulary.actionBarTitle[1], R.drawable.baseline_calendar_month_24);
+
+        ((MainActivity) getActivity()).setActionBar(getResources().getString(R.string.zaj_cia), R.drawable.baseline_calendar_month_24);
         return view;
     }
     void printDays() {

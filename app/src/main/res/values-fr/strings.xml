@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Emploi du temps</string>
+    <string name="witam">bienvenue</string>
+    <string name="poland">Pologne</string>
+    <string name="zmie_j_zyk">Changer de langue</string>
+    <string name="edytuj_profil">Modifier le profil</string>
+    <string name="wybierz_opcje">Choisir des options</string>
+    <string name="strona_g_wna">Page principale</string>
+    <string name="usun_rekordy">supprimer les enregistrements</string>
+    <string name="akceptuj">accepter</string>
+    <string name="wpisz_pierwszy_tekst">entrez le premier texte</string>
+    <string name="wpisz_drugi_tekst">entrez le deuxième texte</string>
+    <string name="wynik">résultat</string>
+    <string name="brak_zajec_w_podanym_zakresie">Pas de cours dans la plage spécifiée</string>
+    <string name="nast_pny">SUIVANT</string>
+    <string name="poprzedni">PRÉCÉDENT</string>
+    <string name="zobacz_wszystkie_zajecia">VOIR TOUS LES COURS</string>
+    <string name="dzisiejsze_zaj_cia">COURS D AUJOURD HUI</string>
+    <string name="zastosuj">Appliquer</string>
+    <string name="anuluj">Annuler</string>
+    <string name="login">Connexion</string>
+    <string name="imie">Prénom</string>
+    <string name="powt_rz_has_o">Répéter le mot de passe</string>
+    <string name="og_lne_informacje">Informations</string>
+    <string name="telefon">Téléphone</string>
+    <string name="nazwisko">Nom de famille</string>
+    <string name="has_o">Mot de passe</string>
+    <string name="spinner">spinner</string>
+    <string name="dodatkowe_informacje">Supplémentaires</string>
+    <string name="usu">SUPPRIMER</string>
+    <string name="_10_00_10_30">10:00 - 10:30</string>
+    <string name="_30">30</string>
+    <string name="przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka">Jardin d enfants municipal n°1 nommé Jan Nowak</string>
+    <string name="obecno">Présence</string>
+    <string name="lista_realizacji_zaj">Liste des cours terminés</string>
+    <string name="brak_element_w_do_wy_wietlenia">Aucun élément à afficher</string>
+    <string name="wyloguj_si">Déconnexion</string>
+    <string name="oceny">Notes</string>
+    <string name="zaj_cia">Cours</string>
+    <string name="wi_cej">Plus</string>
+    <string name="wybierz_j_zyk">La langue</string>
+    <string name="_17_09_2023_23_09_2023">17.09.2023 - 23.09.2023</string>
+    <string name="brak_danych_do_wy_wietlenia">Aucune donnée à afficher !</string>
+    <string name="pon">LUN</string>
+    <string name="_12">12</string>
+    <string name="_10_00">10:00</string>
+    <string name="a">-</string>
+    <string name="_10_30">10:30</string>
+    <string name="akademia_zamosjska_wydzia_logistyki">Académie de Zamosc | Département de la logistique</string>
+    <string name="todo">À FAIRE</string>
+    <string name="uzupenij_wszytskie_pola">Remplissez tous les champs !</string>
+    <string name="podaj_takie_same_hasła">Fournissez les mêmes mots de passe !</string>
+    <string name="uwaga">ATTENTION</string>
+    <string name="czy_jestes_pewny">Êtes-vous sûr ?</string>
+    <string name="tak">OUI</string>
+    <string name="nie">NON</string>
+    <string name="dodaj_zaj_cia">Ajouter des cours</string>
+    <string name="wpisz_nazwe_szko_y">Entrez le nom de l école</string>
+    <string name="czas_rozpocz_cia_zaj">Heure de début des cours</string>
+    <string name="czas_zako_czenia_zaj">Heure de fin des cours</string>
+    <string name="zajecia_form">Annulation de l ajout de cours !</string>
+    <string-array name="spinner">
+        <item>Sélectionnez un groupe</item>
+        <item>1A</item>
+        <item>2A</item>
+        <item>3D</item>
+        <item>2F</item>
+        <item>4H</item>
+        <item>2V</item>
+        <item>1G</item>
+        <item>6D</item>
+        <item>2A</item>
+    </string-array>
+    <string-array name="days">
+        <item>LUN</item>
+        <item>MAR</item>
+        <item>MER</item>
+        <item>JEU</item>
+        <item>VEN</item>
+    </string-array>
+    <string-array name="months">
+        <item>Janvier</item>
+        <item>Février</item>
+        <item>Mars</item>
+        <item>Avril</item>
+        <item>Mai</item>
+        <item>Juin</item>
+        <item>Juillet</item>
+        <item>Août</item>
+        <item>Septembre</item>
+        <item>Octobre</item>
+        <item>Novembre</item>
+        <item>Décembre</item>
+    </string-array>
+    <string-array name="database">
+        <item>Connexion</item>
+        <item>Prénom</item>
+        <item>Nom de famille</item>
+        <item>Téléphone</item>
+        <item>Informations</item>
+        <item>Mot de passe</item>
+        <item>Mot de passe répété</item>
+    </string-array>
+    <string-array name="languageChoose">
+        <item>Polonais</item>
+        <item>Allemand</item>
+        <item>Anglais</item>
+        <item>Français</item>
+        <item>Russe</item>
+        <item>Espagnol</item>
+    </string-array>
+</resources>

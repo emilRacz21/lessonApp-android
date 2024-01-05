@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Horario</string>
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="witam">bienvenido</string>
+    <string name="poland">Polonia</string>
+    <string name="zmie_j_zyk">Cambiar idioma</string>
+    <string name="edytuj_profil">Editar perfil</string>
+    <string name="wybierz_opcje">Seleccionar opciones</string>
+    <string name="strona_g_wna">Página principal</string>
+    <string name="usun_rekordy">borrar registros</string>
+    <string name="akceptuj">aceptar</string>
+    <string name="wpisz_pierwszy_tekst">escribir primer texto</string>
+    <string name="wpisz_drugi_tekst">escribir segundo texto</string>
+    <string name="wynik">resultado</string>
+    <string name="brak_zajec_w_podanym_zakresie">No hay clases en el rango especificado</string>
+    <string name="nast_pny">SIGUIENTE</string>
+    <string name="poprzedni">ANTERIOR</string>
+    <string name="zobacz_wszystkie_zajecia">VER TODAS LAS CLASES</string>
+    <string name="dzisiejsze_zaj_cia">CLASES DE HOY</string>
+    <string name="zastosuj">Aplicar</string>
+    <string name="anuluj">Cancelar</string>
+    <string name="login">Inicio de sesión</string>
+    <string name="imie">Nombre</string>
+    <string name="powt_rz_has_o">Repetir contraseña</string>
+    <string name="og_lne_informacje">Información</string>
+    <string name="telefon">Teléfono</string>
+    <string name="nazwisko">Apellido</string>
+    <string name="has_o">Contraseña</string>
+    <string name="spinner">spinner</string>
+    <string name="dodatkowe_informacje">Información adicional</string>
+    <string name="usu">ELIMINAR</string>
+    <string name="_10_00_10_30">10:00 - 10:30</string>
+    <string name="_30">30</string>
+    <string name="przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka">Jardín de infantes municipal N.º 1 en honor a Jan Nowak</string>
+    <string name="obecno">Asistencia</string>
+    <string name="lista_realizacji_zaj">Lista de clases realizadas</string>
+    <string name="brak_element_w_do_wy_wietlenia">No hay elementos para mostrar</string>
+    <string name="wyloguj_si">Cerrar sesión</string>
+    <string name="oceny">Calificaciones</string>
+    <string name="zaj_cia">Clases</string>
+    <string name="wi_cej">Más</string>
+    <string name="wybierz_j_zyk">Seleccio idioma</string>
+    <string name="_17_09_2023_23_09_2023">17.09.2023 - 23.09.2023</string>
+    <string name="brak_danych_do_wy_wietlenia">¡Sin datos para mostrar!</string>
+    <string name="pon">LUN</string>
+    <string name="_12">12</string>
+    <string name="_10_00">10:00</string>
+    <string name="a">-</string>
+    <string name="_10_30">10:30</string>
+    <string name="akademia_zamosjska_wydzia_logistyki">Academia de Zamosc | Facultad de Logística</string>
+    <string name="todo">POR HACER</string>
+    <string name="uzupenij_wszytskie_pola">¡Complete todos los campos!</string>
+    <string name="podaj_takie_same_hasła">¡Proporcione contraseñas iguales!</string>
+    <string name="uwaga">ATENCIÓN</string>
+    <string name="czy_jestes_pewny">¿Estás seguro?</string>
+    <string name="tak">SÍ</string>
+    <string name="nie">NO</string>
+    <string name="dodaj_zaj_cia">Agregar clases</string>
+    <string name="wpisz_nazwe_szko_y">Escriba el nombre</string>
+    <string name="czas_rozpocz_cia_zaj">Hora de inicio clases</string>
+    <string name="czas_zako_czenia_zaj">Hora de finalización clases</string>
+    <string name="zajecia_form">¡Se canceló la introducción de clases!</string>
+    <string-array name="spinner">
+        <item>Seleccione un grupo</item>
+        <item>1A</item>
+        <item>2A</item>
+        <item>3D</item>
+        <item>2F</item>
+        <item>4H</item>
+        <item>2V</item>
+        <item>1G</item>
+        <item>6D</item>
+        <item>2A</item>
+    </string-array>
+    <string-array name="days">
+        <item>LUN</item>
+        <item>MAR</item>
+        <item>MIE</item>
+        <item>JUE</item>
+        <item>VIE</item>
+    </string-array>
+    <string-array name="months">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+    </string-array>
+    <string-array name="database">
+        <item>Inicio de sesión</item>
+        <item>Nombre</item>
+        <item>Apellido</item>
+        <item>Teléfono</item>
+        <item>Información</item>
+        <item>Contraseña</item>
+        <item>Contraseña repetida</item>
+    </string-array>
+    <string-array name="languageChoose">
+        <item>Polaco</item>
+        <item>Alemán</item>
+        <item>Inglés</item>
+        <item>Francés</item>
+        <item>Ruso</item>
+        <item>Español</item>
+    </string-array>
+</resources>

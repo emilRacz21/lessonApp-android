@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Расписание</string>
+    <string name="hello_blank_fragment">Привет, пустой фрагмент</string>
+    <string name="witam">добро пожаловать</string>
+    <string name="poland">Польша</string>
+    <string name="zmie_j_zyk">Сменить язык</string>
+    <string name="edytuj_profil">Редактировать профиль</string>
+    <string name="wybierz_opcje">Выбрать опции</string>
+    <string name="strona_g_wna">Главная страница</string>
+    <string name="usun_rekordy">удалить записи</string>
+    <string name="akceptuj">принять</string>
+    <string name="wpisz_pierwszy_tekst">введите первый текст</string>
+    <string name="wpisz_drugi_tekst">введите второй текст</string>
+    <string name="wynik">результат</string>
+    <string name="brak_zajec_w_podanym_zakresie">Нет занятий в указанном диапазоне</string>
+    <string name="nast_pny">СЛЕДУЮЩИЙ</string>
+    <string name="poprzedni">ПРЕДЫДУЩИЙ</string>
+    <string name="zobacz_wszystkie_zajecia">СМОТРЕТЬ ВСЕ ЗАНЯТИЯ</string>
+    <string name="dzisiejsze_zaj_cia">ЗАНЯТИЯ СЕГОДНЯ</string>
+    <string name="zastosuj">Применить</string>
+    <string name="anuluj">Отмена</string>
+    <string name="login">Логин</string>
+    <string name="imie">Имя</string>
+    <string name="powt_rz_has_o">Повторите пароль</string>
+    <string name="og_lne_informacje">информация</string>
+    <string name="telefon">Телефон</string>
+    <string name="nazwisko">Фамилия</string>
+    <string name="has_o">Пароль</string>
+    <string name="spinner">спиннер</string>
+    <string name="dodatkowe_informacje">Дополнительная</string>
+    <string name="usu">УДАЛИТЬ</string>
+    <string name="_10_00_10_30">10:00 - 10:30</string>
+    <string name="_30">30</string>
+    <string name="przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka">Муниципальный детский сад № 1 им. Яна Новака</string>
+    <string name="obecno">Присутствие</string>
+    <string name="lista_realizacji_zaj">Список завершенных занятий</string>
+    <string name="brak_element_w_do_wy_wietlenia">Нет элементов для отображения</string>
+    <string name="wyloguj_si">Выйти</string>
+    <string name="oceny">Оценки</string>
+    <string name="zaj_cia">Занятия</string>
+    <string name="wi_cej">Больше</string>
+    <string name="wybierz_j_zyk">Выберите язык</string>
+    <string name="_17_09_2023_23_09_2023">17.09.2023 - 23.09.2023</string>
+    <string name="brak_danych_do_wy_wietlenia">Нет данных для отображения!</string>
+    <string name="pon">ПН</string>
+    <string name="_12">12</string>
+    <string name="_10_00">10:00</string>
+    <string name="a">-</string>
+    <string name="_10_30">10:30</string>
+    <string name="akademia_zamosjska_wydzia_logistyki">Замосковская академия | Факультет логистики</string>
+    <string name="todo">ДЕЛА</string>
+    <string name="uzupenij_wszytskie_pola">Заполните все поля!</string>
+    <string name="podaj_takie_same_hasła">Укажите одинаковые пароли!</string>
+    <string name="uwaga">ВНИМАНИЕ</string>
+    <string name="czy_jestes_pewny">Вы уверены?</string>
+    <string name="tak">ДА</string>
+    <string name="nie">НЕТ</string>
+    <string name="dodaj_zaj_cia">Добавить занятия</string>
+    <string name="wpisz_nazwe_szko_y">Введите название школы</string>
+    <string name="czas_rozpocz_cia_zaj">Время начала занятий</string>
+    <string name="czas_zako_czenia_zaj">Время окончания занятий</string>
+    <string name="zajecia_form">Отменено добавление занятий!</string>
+    <string-array name="spinner">
+        <item>Выберите группу</item>
+        <item>1A</item>
+        <item>2A</item>
+        <item>3D</item>
+        <item>2F</item>
+        <item>4H</item>
+        <item>2V</item>
+        <item>1G</item>
+        <item>6D</item>
+        <item>2A</item>
+    </string-array>
+    <string-array name="days">
+        <item>ПН</item>
+        <item>ВТ</item>
+        <item>СР</item>
+        <item>ЧТ</item>
+        <item>ПТ</item>
+    </string-array>
+    <string-array name="months">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+    <string-array name="database">
+        <item>Логин</item>
+        <item>Имя</item>
+        <item>Фамилия</item>
+        <item>Телефон</item>
+        <item>Информация</item>
+        <item>Пароль</item>
+        <item>Повторенный пароль</item>
+    </string-array>
+    <string-array name="languageChoose">
+        <item>Польский</item>
+        <item>Немецкий</item>
+        <item>Английский</item>
+        <item>Французский</item>
+        <item>Русский</item>
+        <item>Испанский</item>
+    </string-array>
+</resources>

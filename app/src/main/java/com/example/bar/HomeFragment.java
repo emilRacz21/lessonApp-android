@@ -3,7 +3,6 @@ package com.example.bar;
 import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.example.bar.databinding.FragmentHomeBinding;
 import com.example.bar.databinding.FrameLessonSelectBinding;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -29,7 +27,6 @@ public class HomeFragment extends Fragment {
     String school;
     List<LessonList> lessonList = new ArrayList<>();
     String activityDate;
-    LanguageVocabulary languageVocabulary = new LanguageVocabulary();
     int increment;
     Cursor cursor;
     FrameLessonSelectBinding frameBinding;
@@ -47,18 +44,10 @@ public class HomeFragment extends Fragment {
         View view = fragmentHomeBinding.getRoot();
         db= new DatabaseActivitySchedule(getContext());
         choosedLang = ((MainActivity)getActivity()).value;
-        ((MainActivity)getActivity()).setLanguage(choosedLang, languageVocabulary);
-        fragmentHomeBinding.textTopLesson.setText(languageVocabulary.home[0]);
-        fragmentHomeBinding.previousText.setText(languageVocabulary.home[1]);
-        fragmentHomeBinding.nextText.setText(languageVocabulary.home[2]);
-        fragmentHomeBinding.emptyLessonText.setText(languageVocabulary.home[3]);
-        fragmentHomeBinding.showMoreText.setText(languageVocabulary.home[4]);
+        ((MainActivity) getActivity()).setActionBar(getResources().getString(R.string.strona_g_wna), R.drawable.baseline_home_24);
         fragmentHomeBinding.showMoreText.setOnClickListener( view1 -> ((MainActivity)getActivity()).setFragment(new LessonFragment()));
-        ((MainActivity)getActivity()).setActionBar(languageVocabulary.actionBarTitle[0], R.drawable.baseline_home_24);
-
         increment = 0;
         printDays();
-
         fragmentHomeBinding.nextText.setOnClickListener(view1 -> {
             System.out.println(increment);
             getDays();
@@ -70,14 +59,12 @@ public class HomeFragment extends Fragment {
             } else if (increment < 0) return;
             getDays();
         });
-
         return view;
     }
     void getDays() {
         cursor = db.takeAllSchedules();
         fragmentHomeBinding.mtFrame.removeAllViews();
         boolean hasSchedule = false;
-
         while (cursor.moveToNext()) {
             frameBinding = FrameLessonSelectBinding.inflate(getLayoutInflater());
             View singleFrame = frameBinding.getRoot();
@@ -95,8 +82,6 @@ public class HomeFragment extends Fragment {
         }
         fragmentHomeBinding.hideMyLayout.setVisibility(hasSchedule ? View.GONE : View.VISIBLE);
     }
-
-
     @SuppressLint("Range")
     void getCursor(Cursor cursor){
         timeBegin = cursor.getString(cursor.getColumnIndex("timeBegin"));
@@ -110,17 +95,15 @@ public class HomeFragment extends Fragment {
         calendar.setTime(new Date());
         for (int week = 1; week <= 52; week++) {
             calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-            // Loop through Monday to Friday and store the formatted dates
             for (int dayOfWeek = 0; dayOfWeek < 5; dayOfWeek++) {
                 SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
                 String formattedDate = dateFormat.format(calendar.getTime());
                 lessonList.add(new LessonList(formattedDate, formattedDate));
-                calendar.add(Calendar.DAY_OF_WEEK, 1); // Move to the next day
+                calendar.add(Calendar.DAY_OF_WEEK, 1);
             }
             calendar.add(Calendar.WEEK_OF_YEAR, 1);
         }
     }
-
     //Konwersja long na string z formatem.
     @SuppressLint("SimpleDateFormat")
     private String convertToFormattedDate(String dateStr) {
@@ -130,7 +113,7 @@ public class HomeFragment extends Fragment {
             return inputDateFormat.format(date);
         } catch (ParseException e) {
             e.printStackTrace();
-            return "Error parsing date";
+            return "bład";
         }
     }
 }

@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Schedule</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="witam">witam</string>
     <string name="poland">Poland</string>
     <string name="zmie_j_zyk">Zmień język</string>
@@ -22,7 +21,7 @@
     <string name="login">Login</string>
     <string name="imie">Imie</string>
     <string name="powt_rz_has_o">Powtórz hasło</string>
-    <string name="og_lne_informacje">Ogólne informacje</string>
+    <string name="og_lne_informacje">Twoje Informacje</string>
     <string name="telefon">Telefon</string>
     <string name="nazwisko">Nazwisko</string>
     <string name="has_o">Hasło</string>
@@ -49,4 +48,67 @@
     <string name="_10_30">10:30</string>
     <string name="akademia_zamosjska_wydzia_logistyki">Akademia zamosjska | Wydział Logistyki</string>
     <string name="todo">TODO</string>
+    <string name="uzupenij_wszytskie_pola">Uzupełnij wszytskie pola!</string>
+    <string name="podaj_takie_same_hasła">Podaj takie same hasła!</string>
+    <string name="uwaga">UWAGA</string>
+    <string name="czy_jestes_pewny">Czy jesteś pewny?</string>
+    <string name="tak">TAK</string>
+    <string name="nie">NIE</string>
+    <string name="dodaj_zaj_cia">Dodaj zajęcia</string>
+    <string name="wpisz_nazwe_szko_y">Wpisz nazwe szkoły</string>
+    <string name="czas_rozpocz_cia_zaj">Czas rozpoczęcia zajęć</string>
+    <string name="czas_zako_czenia_zaj">Czas zakończenia zajęć</string>
+    <string name="zajecia_form">Anulowano wprowadzanie zajęć!</string>
+    <string-array name="spinner">
+        <item>Wybierz grupę</item>
+        <item>1A</item>
+        <item>2A</item>
+        <item>3D</item>
+        <item>2F</item>
+        <item>4H</item>
+        <item>2V</item>
+        <item>1G</item>
+        <item>6D</item>
+        <item>2A</item>
+    </string-array>
+    <string-array name="days">
+        <item>PON</item>
+        <item>WTO</item>
+        <item>ŚRO</item>
+        <item>CZW</item>
+        <item>PT</item>
+    </string-array>
+    <string-array name="months">
+        <item>Styczeń</item>
+        <item>Luty</item>
+        <item>Marzec</item>
+        <item>Kwiecień</item>
+        <item>Maj</item>
+        <item>Czerwiec</item>
+        <item>Lipiec</item>
+        <item>Sierpień</item>
+        <item>Wrzesień</item>
+        <item>Październik</item>
+        <item>Listopad</item>
+        <item>Grudzień</item>
+    </string-array>
+    <string-array name="database">
+        <item>Login</item>
+        <item>Imię</item>
+        <item>Nazwisko</item>
+        <item>Telefon</item>
+        <item>Informacje</item>
+        <item>Hasło</item>
+        <item>Powtórzone hasło</item>
+    </string-array>
+    <string-array name="languageChoose">
+        <item>Polski</item>
+        <item>Niemiecki</item>
+        <item>Angielski</item>
+        <item>Francuski</item>
+        <item>Rosyjski</item>
+        <item>Hiszpański</item>
+    </string-array>
+
+
 </resources>

@@ -29,8 +29,6 @@ public class LessonSelectFragment extends Fragment {
     String school;
     String activityDate;
     boolean frameAdded = false;
-    int choosedLang;
-    LanguageVocabulary languageVocabulary = new LanguageVocabulary();
     String[] DAYS_OF_WEEK;
     public LessonSelectFragment() {}
 
@@ -42,17 +40,8 @@ public class LessonSelectFragment extends Fragment {
         fragmentLessonSelectBinding = FragmentLessonSelectBinding.inflate(getLayoutInflater());
         View view = fragmentLessonSelectBinding.getRoot();
 
-        //deklaracja jezyka.
-        choosedLang = ((MainActivity)getActivity()).value;
-        ((MainActivity)getActivity()).setLanguage(choosedLang, languageVocabulary);
         //deklaracja dni tygodnia do zmiany jezyka.
-        DAYS_OF_WEEK = new String[]{
-                languageVocabulary.daysOfWeek[0],
-                languageVocabulary.daysOfWeek[1],
-                languageVocabulary.daysOfWeek[2],
-                languageVocabulary.daysOfWeek[3],
-                languageVocabulary.daysOfWeek[4]
-        };
+        DAYS_OF_WEEK = getResources().getStringArray(R.array.days);
         //Klasa z baza danych o zajeciach.
         DatabaseActivitySchedule db = new DatabaseActivitySchedule(getContext());
         getParentFragmentManager().setFragmentResultListener("lessons", this, (requestKey, result) -> {
@@ -65,6 +54,7 @@ public class LessonSelectFragment extends Fragment {
                 singleFrame.setId(increment);
                 //odwołanie do metody cursor, ustawia na stringi dane z DB.
                 getCursor(cursor);
+                System.out.println(getDayNumber(profileLogin));
                 if (formatDate(monday, getDayNumber(profileLogin), "dd.MM.yyyy").equals(activityDate)) {
                     fragmentLessonSelectBinding.hideRelativeLayout.setVisibility(View.GONE);
                     //binding na elementy znajdujące sie w frame_lesson_select.xml
@@ -87,7 +77,6 @@ public class LessonSelectFragment extends Fragment {
                 //dodanie do layoutu elelementu hideRelativeLayout gdy frameadded = false i nie nastąpiła inkrementacja w pętli while.
                 fragmentLessonSelectBinding.hideRelativeLayout.setVisibility(View.VISIBLE);
                 //Dodanie jezyka gdy jest widoczny element oznajmijacy o braku elelemntów.
-                fragmentLessonSelectBinding.emptyElements.setText(languageVocabulary.menuBottom[4]);
             }
             //binding na elelemnt id=textMonth znajdujący się w fragment_lesson_select.xml
             fragmentLessonSelectBinding.textMonth.setText(formatDate(monday, 0, "M").toUpperCase());
@@ -142,11 +131,12 @@ public class LessonSelectFragment extends Fragment {
     }
     //Zmień język i dodaj rok.
     void setLanguage() {
+        String[] month = getResources().getStringArray(R.array.months);
         String currentMonth = fragmentLessonSelectBinding.textMonth.getText().toString().toUpperCase();
         for (int i = 0, n = 1; i < 12; i++, n++) {
             if (currentMonth.equals(String.valueOf(n))) {
                 int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-                String monthWithYear = languageVocabulary.seasons[i] + " " + currentYear;
+                String monthWithYear = month[i] + " " + currentYear;
                 fragmentLessonSelectBinding.textMonth.setText(monthWithYear);
                 break;
             }

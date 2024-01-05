@@ -3,7 +3,6 @@ package com.example.bar;
 import android.app.AlertDialog;
 import android.database.Cursor;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,11 +11,9 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.example.bar.databinding.FragmentEditProfileBinding;
-
 public class EditProfileFragment extends Fragment {
     FragmentEditProfileBinding profileBinding;
-    LanguageVocabulary languageVocabulary = new LanguageVocabulary();
-    int choosedLang;
+    String[] database;
     EditText[] editTexts;
     public EditProfileFragment() {}
 
@@ -27,31 +24,10 @@ public class EditProfileFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        database = getResources().getStringArray(R.array.database);
         profileBinding = FragmentEditProfileBinding.inflate(inflater, container, false);
         View view = profileBinding.getRoot();
-        choosedLang = ((MainActivity)getActivity()).value;
         DatabaseActivity databaseActivity = new DatabaseActivity(getContext());
-        ((MainActivity)getActivity()).setLanguage(choosedLang, languageVocabulary);
-        setHintText();
-        profileBinding.buttonCancel.setOnClickListener(view1-> deleteDB(databaseActivity));
-        profileBinding.buttonAccept.setOnClickListener(view1 -> addDB(databaseActivity));
-        profileBinding.backArrow.setOnClickListener(view1 -> ((MainActivity)getActivity()).setFragment(new MoreFragment()));
-        updateList(databaseActivity);
-        return view;
-    }
-    void setHintText(){
-        ((MainActivity)getActivity()).setActionBar(languageVocabulary.actionBarTitle[3], R.drawable.baseline_person_24);
-        profileBinding.informationText.setText(languageVocabulary.editProfileLang[0]);
-        String[] hints = {
-                languageVocabulary.editProfileLang[1],
-                languageVocabulary.editProfileLang[2],
-                languageVocabulary.editProfileLang[3],
-                languageVocabulary.editProfileLang[4],
-                languageVocabulary.editProfileLang[5],
-                languageVocabulary.editProfileLang[6],
-                languageVocabulary.editProfileLang[7]
-        };
         editTexts= new EditText[]{
                 profileBinding.editTextText,
                 profileBinding.editTextText1,
@@ -61,22 +37,21 @@ public class EditProfileFragment extends Fragment {
                 profileBinding.editTextText5,
                 profileBinding.editTextText6,
         };
-        for (int i = 0; i < editTexts.length ; i++){
-            editTexts[i].setHint(hints[i]);
-        }
-        profileBinding.buttonAccept.setText(languageVocabulary.editProfileLang[8]);
-        profileBinding.buttonCancel.setText(languageVocabulary.editProfileLang[9]);
+        profileBinding.buttonCancel.setOnClickListener(view1-> deleteDB(databaseActivity));
+        profileBinding.buttonAccept.setOnClickListener(view1 -> addDB(databaseActivity));
+        profileBinding.backArrow.setOnClickListener(view1 -> ((MainActivity)getActivity()).setFragment(new MoreFragment()));
+        updateList(databaseActivity);
+        return view;
     }
-
     void addDB(DatabaseActivity databaseActivity){
         if(!(profileBinding.editTextText5.getText().toString().isEmpty() || profileBinding.editTextText6.getText().toString().isEmpty())){
             if(profileBinding.editTextText5.getText().toString().equals(profileBinding.editTextText6.getText().toString())){
                 makeDialog(databaseActivity);
             }else{
-                Toast.makeText(getContext(), languageVocabulary.toastMessage[1],Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), getResources().getString(R.string.podaj_takie_same_hasła),Toast.LENGTH_SHORT).show();
             }
         }else {
-            Toast.makeText(getContext(), languageVocabulary.toastMessage[0],Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), getResources().getString(R.string.uzupenij_wszytskie_pola),Toast.LENGTH_SHORT).show();
         }
     }
     void deleteDB(DatabaseActivity databaseActivity){
@@ -87,19 +62,18 @@ public class EditProfileFragment extends Fragment {
             updateList(databaseActivity);
         }
     }
-
     void makeDialog(DatabaseActivity databaseActivity){
         AlertDialog alertDialog = new AlertDialog.Builder(getContext())
-                .setTitle(languageVocabulary.dialog[0])
-                .setMessage(languageVocabulary.dialog[1])
+                .setTitle(getResources().getString(R.string.uwaga))
+                .setMessage(getResources().getString(R.string.czy_jestes_pewny))
                 .setCancelable(false)
                 .setIcon(R.drawable.baseline_warning_24)
-                .setPositiveButton(languageVocabulary.dialog[2],(dialog, which) -> {
+                .setPositiveButton(getResources().getString(R.string.tak),(dialog, which) -> {
                     databaseActivity.addBookArray(editTexts);
                     updateList(databaseActivity);
                     dialog.dismiss();
                 })
-                .setNegativeButton(languageVocabulary.dialog[3], (dialog, which) -> dialog.dismiss())
+                .setNegativeButton(getResources().getString(R.string.nie), (dialog, which) -> dialog.dismiss())
                 .show();
     }
     private void updateList(DatabaseActivity db) {
@@ -107,8 +81,8 @@ public class EditProfileFragment extends Fragment {
         StringBuilder builder = new StringBuilder();
         while (c.moveToNext()) {
             builder.append("ID:" + c.getInt(0));
-            for(int i = 0, n = 1; i< languageVocabulary.database.length; i++, n++){
-                builder.append("\n"+ languageVocabulary.database[i] + ": "+ c.getString(n));
+            for(int i = 0, n = 1; i< database.length; i++, n++){
+                builder.append("\n"+ database[i] + ": "+ c.getString(n));
             }
             builder.append("\n---------------------------\n");
         }

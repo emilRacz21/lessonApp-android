@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import com.example.bar.databinding.FragmentMoreBinding;
 public class MoreFragment extends Fragment {
     FragmentMoreBinding fragmentMoreBinding;
-    int choosedLang;
     public MoreFragment() {}
 
     @Override
@@ -22,24 +21,10 @@ public class MoreFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         fragmentMoreBinding = FragmentMoreBinding.inflate(inflater, container, false);
         View view = fragmentMoreBinding.getRoot();
-
-        LanguageVocabulary languageVocabulary = new LanguageVocabulary();
-        choosedLang = ((MainActivity)getActivity()).value;
-        ((MainActivity)getActivity()).setLanguage(choosedLang, languageVocabulary);
-
-        setLang(languageVocabulary);
-
         fragmentMoreBinding.changeHomeScreenFragment.setOnClickListener( view1 -> ((MainActivity)getActivity()).setFragment(new HomeFragment()));
         fragmentMoreBinding.editProfile.setOnClickListener( view1 -> ((MainActivity)getActivity()).setFragment(new EditProfileFragment()));
         fragmentMoreBinding.languageSet.setOnClickListener( view1-> ((MainActivity)getActivity()).setFragment(new LanguageFragment()));
+        ((MainActivity) getActivity()).setActionBar(getResources().getString(R.string.wi_cej), R.drawable.baseline_more_horiz_24);
         return view;
-    }
-
-    void setLang(LanguageVocabulary languageVocabulary){
-        fragmentMoreBinding.titleHome.setText(languageVocabulary.actionBarTitle[0]);
-        fragmentMoreBinding.editProfileText.setText(languageVocabulary.actionBarTitle[3]);
-        fragmentMoreBinding.changeLanguage.setText(languageVocabulary.actionBarTitle[4]);
-        fragmentMoreBinding.optionsText.setText(languageVocabulary.options[0]);
-        ((MainActivity)getActivity()).setActionBar(languageVocabulary.actionBarTitle[5], R.drawable.baseline_more_horiz_24);
     }
 }

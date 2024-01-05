@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <string name="app_name">Schedule</string>
+        <string name="witam">welcome</string>
+        <string name="poland">Poland</string>
+        <string name="zmie_j_zyk">Change language</string>
+        <string name="edytuj_profil">Edit profile</string>
+        <string name="wybierz_opcje">Choose options</string>
+        <string name="strona_g_wna">Main page</string>
+        <string name="usun_rekordy">delete records</string>
+        <string name="akceptuj">accept</string>
+        <string name="wpisz_pierwszy_tekst">enter the first text</string>
+        <string name="wpisz_drugi_tekst">enter the second text</string>
+        <string name="wynik">result</string>
+        <string name="brak_zajec_w_podanym_zakresie">No classes in the specified range</string>
+        <string name="nast_pny">NEXT</string>
+        <string name="poprzedni">PREVIOUS</string>
+        <string name="zobacz_wszystkie_zajecia">SEE ALL CLASSES</string>
+        <string name="dzisiejsze_zaj_cia">TODAYS CLASSES</string>
+        <string name="zastosuj">Apply</string>
+        <string name="anuluj">Cancel</string>
+        <string name="login">Login</string>
+        <string name="imie">First Name</string>
+        <string name="powt_rz_has_o">Repeat password</string>
+        <string name="og_lne_informacje">Information</string>
+        <string name="telefon">Phone</string>
+        <string name="nazwisko">Last Name</string>
+        <string name="has_o">Password</string>
+        <string name="spinner">spinner</string>
+        <string name="dodatkowe_informacje">Additional info</string>
+        <string name="usu">DELETE</string>
+        <string name="_10_00_10_30">10:00 - 10:30</string>
+        <string name="_30">30</string>
+        <string name="przedszkole_samorz_dowe_nr_1_n_im_jana_nowaka">Municipal Kindergarten No. 1 named after Jan Nowak</string>
+        <string name="obecno">Attendance</string>
+        <string name="lista_realizacji_zaj">List of completed classes</string>
+        <string name="brak_element_w_do_wy_wietlenia">No items to display</string>
+        <string name="wyloguj_si">Log out</string>
+        <string name="oceny">Grades</string>
+        <string name="zaj_cia">Classes</string>
+        <string name="wi_cej">More</string>
+        <string name="wybierz_j_zyk">Choose language</string>
+        <string name="_17_09_2023_23_09_2023">17.09.2023 - 23.09.2023</string>
+        <string name="brak_danych_do_wy_wietlenia">No data to display!</string>
+        <string name="pon">MON</string>
+        <string name="_12">12</string>
+        <string name="_10_00">10:00</string>
+        <string name="a">-</string>
+        <string name="_10_30">10:30</string>
+        <string name="akademia_zamosjska_wydzia_logistyki">Zamosc Academy | Logistics Department</string>
+        <string name="todo">TODO</string>
+        <string name="uzupenij_wszytskie_pola">Fill in all fields!</string>
+        <string name="podaj_takie_same_hasła">Provide the same passwords!</string>
+        <string name="uwaga">ATTENTION</string>
+        <string name="czy_jestes_pewny">Are you sure?</string>
+        <string name="tak">YES</string>
+        <string name="nie">NO</string>
+        <string name="dodaj_zaj_cia">Add classes</string>
+        <string name="wpisz_nazwe_szko_y">Enter school name</string>
+        <string name="czas_rozpocz_cia_zaj">Start time of classes</string>
+        <string name="czas_zako_czenia_zaj">End time of classes</string>
+        <string name="zajecia_form">Cancelled entering classes!</string>
+        <string-array name="spinner">
+            <item>Select a group</item>
+            <item>1A</item>
+            <item>2A</item>
+            <item>3D</item>
+            <item>2F</item>
+            <item>4H</item>
+            <item>2V</item>
+            <item>1G</item>
+            <item>6D</item>
+            <item>2A</item>
+        </string-array>
+        <string-array name="days">
+            <item>MON</item>
+            <item>TUE</item>
+            <item>WED</item>
+            <item>THU</item>
+            <item>FRI</item>
+        </string-array>
+        <string-array name="months">
+            <item>January</item>
+            <item>February</item>
+            <item>March</item>
+            <item>April</item>
+            <item>May</item>
+            <item>June</item>
+            <item>July</item>
+            <item>August</item>
+            <item>September</item>
+            <item>October</item>
+            <item>November</item>
+            <item>December</item>
+        </string-array>
+        <string-array name="database">
+            <item>Login</item>
+            <item>First Name</item>
+            <item>Last Name</item>
+            <item>Phone</item>
+            <item>Information</item>
+            <item>Password</item>
+            <item>Repeated Password</item>
+        </string-array>
+        <string-array name="languageChoose">
+            <item>Polish</item>
+            <item>German</item>
+            <item>English</item>
+            <item>French</item>
+            <item>Russian</item>
+            <item>Spanish</item>
+        </string-array>
+    </resources>

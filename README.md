@@ -61,7 +61,7 @@
 
 ## Design
 
-![schedule](https://github.com/user-attachments/assets/69b50c47-d6b1-4989-8f4a-7e1c6ece7415)
+![sch](https://github.com/user-attachments/assets/f00bf48d-2f36-483b-9201-e6c299859df6)
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.

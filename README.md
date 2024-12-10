@@ -22,7 +22,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/lessonapp-android.git
+   git clone https://github.com/emilRacz21/lessonApp-android
 
 2. Open the project in Android Studio:
    - Launch Android Studio and select Open an existing project.
